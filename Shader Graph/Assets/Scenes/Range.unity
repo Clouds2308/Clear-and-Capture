@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e9e2f28d021b44449a430d9b5028b304,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -5505,17 +5506,17 @@ PrefabInstance:
     - target: {fileID: 744893849948414088, guid: 4462362f11684dd4d970a36938f6f47f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.88
+      value: 61.08
       objectReference: {fileID: 0}
     - target: {fileID: 744893849948414088, guid: 4462362f11684dd4d970a36938f6f47f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.5
+      value: 14.453
       objectReference: {fileID: 0}
     - target: {fileID: 744893849948414088, guid: 4462362f11684dd4d970a36938f6f47f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.85
+      value: -31.72
       objectReference: {fileID: 0}
     - target: {fileID: 744893849948414088, guid: 4462362f11684dd4d970a36938f6f47f,
         type: 3}
