@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 499272}
   - component: {fileID: 3359276}
   - component: {fileID: 2330366}
-  - component: {fileID: 6451052}
   m_Layer: 0
   m_Name: fence_base_LOD1
   m_TagString: Untagged
@@ -81,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6451052
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113106}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 519d021c75022d443a7361c5aced69b1, type: 3}
 --- !u!1 &119550
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +91,6 @@ GameObject:
   - component: {fileID: 416514}
   - component: {fileID: 3385042}
   - component: {fileID: 2386082}
-  - component: {fileID: 6477766}
   m_Layer: 0
   m_Name: fence_base_LOD3
   m_TagString: Untagged
@@ -175,20 +159,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6477766
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119550}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 519d021c75022d443a7361c5aced69b1, type: 3}
 --- !u!1 &141426
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +170,6 @@ GameObject:
   - component: {fileID: 458638}
   - component: {fileID: 3380960}
   - component: {fileID: 2384888}
-  - component: {fileID: 6409122}
   m_Layer: 0
   m_Name: fence_base_LOD0
   m_TagString: Untagged
@@ -270,20 +239,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6409122
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 519d021c75022d443a7361c5aced69b1, type: 3}
 --- !u!1 &156044
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +289,6 @@ GameObject:
   - component: {fileID: 401534}
   - component: {fileID: 3343070}
   - component: {fileID: 2379422}
-  - component: {fileID: 6457676}
   m_Layer: 0
   m_Name: fence_base_LOD2
   m_TagString: Untagged
@@ -404,20 +358,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6457676
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194774}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 519d021c75022d443a7361c5aced69b1, type: 3}
 --- !u!1 &1726663252537666
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4699360296288084}
+  - component: {fileID: 2032915872}
   m_Layer: 0
   m_Name: SM_fence_base
   m_TagString: Untagged
@@ -453,3 +394,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2032915872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726663252537666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5929432, z: 1}
+  m_Center: {x: 0, y: 0.31014204, z: 0}

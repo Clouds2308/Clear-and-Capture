@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 438312}
   - component: {fileID: 3359506}
   - component: {fileID: 2372560}
-  - component: {fileID: 6433886}
   m_Layer: 0
   m_Name: fence_stand_small_LOD0
   m_TagString: Untagged
@@ -81,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6433886
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300014, guid: cd9b78a9c86705d46a80fffd2c17b681, type: 3}
 --- !u!1 &109770
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +91,6 @@ GameObject:
   - component: {fileID: 485874}
   - component: {fileID: 3305226}
   - component: {fileID: 2346242}
-  - component: {fileID: 6459840}
   m_Layer: 0
   m_Name: fence_stand_small_LOD3
   m_TagString: Untagged
@@ -175,20 +159,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6459840
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109770}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300014, guid: cd9b78a9c86705d46a80fffd2c17b681, type: 3}
 --- !u!1 &125250
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +170,6 @@ GameObject:
   - component: {fileID: 469010}
   - component: {fileID: 3395848}
   - component: {fileID: 2394244}
-  - component: {fileID: 6402032}
   m_Layer: 0
   m_Name: fence_stand_small_LOD2
   m_TagString: Untagged
@@ -270,20 +239,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6402032
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125250}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300014, guid: cd9b78a9c86705d46a80fffd2c17b681, type: 3}
 --- !u!1 &149912
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +289,6 @@ GameObject:
   - component: {fileID: 404784}
   - component: {fileID: 3300744}
   - component: {fileID: 2371552}
-  - component: {fileID: 6427766}
   m_Layer: 0
   m_Name: fence_stand_small_LOD1
   m_TagString: Untagged
@@ -404,20 +358,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6427766
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300014, guid: cd9b78a9c86705d46a80fffd2c17b681, type: 3}
 --- !u!1 &1726663252537666
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4699360296288084}
+  - component: {fileID: 2054785649}
   m_Layer: 0
   m_Name: SM_fence_stand_small
   m_TagString: Untagged
@@ -443,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 1726663252537666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children:
   - {fileID: 438312}
   - {fileID: 404784}
@@ -453,3 +394,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2054785649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726663252537666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7450131, y: 1.4539069, z: 4.1549983}
+  m_Center: {x: 0.32644954, y: 0.77304655, z: 1.9149481}
