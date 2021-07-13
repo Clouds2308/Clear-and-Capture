@@ -3,10 +3,10 @@
 public class DroneMovement : MonoBehaviour
 {
     [SerializeField] private DroneInput _inputScript;  //reference to drone input script
-
     [SerializeField] private Transform _groundCheck; //groundCheck on drone
     [SerializeField] private Transform _droneCamera;    //camera that sits on drone
     [SerializeField] private Rigidbody _droneRb;        //drone rigidbody
+
     [SerializeField] private float _cameraSensitivity = 5f;  //sensitivity of camera movement
     [SerializeField] private float _cameraMinimumY = -70f;   //minimum camera clamp   
     [SerializeField] private float _cameraMaximumY = 70f;    //maximum camera clamp
@@ -81,6 +81,7 @@ public class DroneMovement : MonoBehaviour
     {
         _inputScript = GetComponent<DroneInput>();
     }
+   
 
     private void Update()
     {

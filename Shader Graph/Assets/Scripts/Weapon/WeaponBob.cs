@@ -47,4 +47,5 @@ public class WeaponBob : MonoBehaviour
         if (_idleCounter > Mathf.PI * 2) _idleCounter = 0;
         if (_moveCounter > Mathf.PI * 2) _moveCounter = 0;
     }
+    
 }

@@ -6,7 +6,7 @@ public class Switch_Manager : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _drone;
     [SerializeField] private GameObject _gun;  
-    [SerializeField] private Animator _fadeAnimator;
+    //[SerializeField] private Animator _fadeAnimator;
    
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -22,6 +22,9 @@ public class Switch_Manager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerInput = _player.GetComponent<PlayerInput>();
         _playerMovement = _player.GetComponent<PlayerMovement>();
@@ -76,7 +79,7 @@ public class Switch_Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            _fadeAnimator.SetTrigger("isSwitch");
+            //_fadeAnimator.SetTrigger("isSwitch");
 
             if (_isDroning != true)
             {

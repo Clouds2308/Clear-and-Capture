@@ -10,6 +10,7 @@ public class DoorController : MonoBehaviour
     private void Start()
     {
         GameEvents.current.onDoorwayTriggerEnter += onDoorwayOpen;
+        _doorAnimator = GetComponent<Animator>();
     }  
 
     private void OnTriggerExit(Collider other)
@@ -19,10 +20,10 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.name == "Drone")
+        if (other.transform.tag == "Drone")
         {
             _doorwayPanel.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) && transform.childCount == 3)
+            if (Input.GetKeyDown(KeyCode.E) && transform.GetComponentInChildren<LockPadDestroy>() == null)
             {                
                 GameEvents.current.DoorwayTriggerEnter(_id);                
             }
