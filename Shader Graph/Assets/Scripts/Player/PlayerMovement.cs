@@ -87,13 +87,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {        
-        LookAround();
+        //LookAround();
         GroundCheck();
     }
 
     private void FixedUpdate()
-    {        
+    {
         MovementControl();
         AdditionalGravity();
+    }
+
+    private void LateUpdate()
+    {
+        LookAround();
     }
 }
