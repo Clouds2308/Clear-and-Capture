@@ -1007,7 +1007,7 @@ Transform:
   m_GameObject: {fileID: 5754046077299919436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4835480314809250889}
   m_Father: {fileID: 0}
@@ -1038,8 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1720eba7c7bc043944575b66499448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageScreenAnimator: {fileID: 0}
-  destroyEffecet: {fileID: 0}
+  destroyEffecet: {fileID: 100006, guid: 2e7e92bc7175b744ea40878dedfa79e4, type: 3}
   _claymoreExplosionDamage: 0
 --- !u!1 &6277711298986432011
 GameObject:

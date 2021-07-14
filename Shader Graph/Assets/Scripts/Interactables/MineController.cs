@@ -5,7 +5,7 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     public GameObject explosionEffect;
 
     [SerializeField] private GameObject _droneCamera;
-    [SerializeField] private Animator _damageScreenAnimator;
+    //[SerializeField] private Animator _damageScreenAnimator;
     private Player _player;
 
     [SerializeField] private int id;
@@ -20,7 +20,7 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
         }
         if(collision.transform.name == "Player")
         {
-            _damageScreenAnimator.SetTrigger("isPlayerDamage");
+            //_damageScreenAnimator.SetTrigger("isPlayerDamage");
             _player.TakeDamage(_mineExplosionDamage);
         }
 

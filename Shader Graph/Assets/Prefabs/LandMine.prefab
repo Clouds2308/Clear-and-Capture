@@ -58,9 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88285249786a4324cb537e3ebe7b7197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 100002, guid: 6890a03af913b874092fbb1e8337747d, type: 3}
   _droneCamera: {fileID: 0}
-  _damageScreenAnimator: {fileID: 0}
   id: 0
   _mineExplosionDamage: 10
 --- !u!1 &633489610876436500

@@ -4,7 +4,7 @@ using System;
 public class ClaymoreController : MonoBehaviour, IDestructibleByGun
 {
     private Player _player;
-    [SerializeField] private Animator _damageScreenAnimator;
+    //[SerializeField] private Animator _damageScreenAnimator;
     [SerializeField] private GameObject destroyEffecet;
     [SerializeField] private float _claymoreExplosionDamage;
 
@@ -25,7 +25,7 @@ public class ClaymoreController : MonoBehaviour, IDestructibleByGun
 
     void PlayerEnterClaymore()
     {
-        _damageScreenAnimator.SetTrigger("isPlayerDamage");
+        //_damageScreenAnimator.SetTrigger("isPlayerDamage");
         _player.TakeDamage(_claymoreExplosionDamage);        
         DestroyOnHit();
     }
