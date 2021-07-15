@@ -444,9 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4c0aa6f477f14799993a530bfb291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doorwayPanel: {fileID: 0}
   _doorAnimator: {fileID: 0}
-  _id: 1
+  _id: 0
 --- !u!65 &1280593420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -458,8 +457,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.399292, y: 2.0684414, z: 1.1004066}
-  m_Center: {x: 0.033836387, y: 1.0698767, z: -0.3825035}
+  m_Size: {x: 2.399292, y: 2.0684414, z: 1.1305408}
+  m_Center: {x: 0.033836387, y: 1.0698767, z: -0.3975706}
 --- !u!1 &8522180837844811407
 GameObject:
   m_ObjectHideFlags: 0

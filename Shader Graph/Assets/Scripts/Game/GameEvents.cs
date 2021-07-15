@@ -13,10 +13,10 @@ public class GameEvents : MonoBehaviour
 
     #region InteractableEvents
 
-    public event Action<int> onDoorwayTriggerEnter;
-    public void DoorwayTriggerEnter(int id)
+    public event Action<int> onKeyPadBreak;
+    public void KeyPadBreak(int id)
     {
-        onDoorwayTriggerEnter?.Invoke(id);
+        onKeyPadBreak?.Invoke(id);
     }
 
     public event Action<int> onMineTriggerEnter;

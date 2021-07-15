@@ -9,6 +9,6 @@ public class LockPadDestroy : MonoBehaviour,IDestructibleByDrone
         GameObject clone = (GameObject) Instantiate(plasmaEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject,1f);
         Destroy(clone, 2f);
-    }
-        
+    }    
+
 }

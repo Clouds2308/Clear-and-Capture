@@ -1,45 +1,29 @@
 ﻿using UnityEngine;
-using System;
+using System.Collections;
 
 public class DoorController : MonoBehaviour
 {
-    //[SerializeField] private GameObject _doorwayPanel;
     [SerializeField] private Animator _doorAnimator;
-    [SerializeField] private int _id;
+    private bool doorOpen = false;
 
     private void Start()
     {
-        GameEvents.current.onDoorwayTriggerEnter += onDoorwayOpen;
         _doorAnimator = GetComponent<Animator>();
-    }  
-
-    private void OnTriggerExit(Collider other)
-    {
-        //_doorwayPanel.SetActive(false);
-    }
+    }    
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "Drone")
+        if (other.CompareTag("Drone") && transform.childCount == 4 && !doorOpen)
         {
-            //_doorwayPanel.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) && transform.childCount == 4)
-            {                
-                GameEvents.current.DoorwayTriggerEnter(_id);                
-            }
+            StartCoroutine(DoorOpen());
         }
     }
 
-    private void onDoorwayOpen(int id)
+    IEnumerator DoorOpen()
     {
-        if (id == this._id)
-        {            
-            _doorAnimator.SetTrigger("IsOpen");                       
-        }    
+        doorOpen = true;
+        yield return new WaitForSeconds(1f);        
+        _doorAnimator.SetTrigger("IsOpen");
     }
-
-    private void OnDisable()
-    {
-        GameEvents.current.onDoorwayTriggerEnter -= onDoorwayOpen;        
-    }    
+    
 }

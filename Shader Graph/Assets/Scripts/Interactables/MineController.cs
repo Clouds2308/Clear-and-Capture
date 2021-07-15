@@ -36,7 +36,7 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     }
     public void DestroyOnHit()
     {
-        GameObject clone  = (GameObject) Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        GameObject clone  = Instantiate(explosionEffect, transform.position, Quaternion.identity) as GameObject;
         Destroy(this.gameObject);
         Destroy(clone, 2f);
     }    
