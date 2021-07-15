@@ -4,8 +4,8 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
 {
     public GameObject explosionEffect;
 
-    [SerializeField] private GameObject _droneCamera;
     //[SerializeField] private Animator _damageScreenAnimator;
+    private GameObject _droneCamera;
     private Player _player;
 
     [SerializeField] private int id;
@@ -51,5 +51,6 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     {
         GameEvents.current.onMineTriggerEnter += OnMineEnter;
         _player = FindObjectOfType<Player>();
+        _droneCamera = GameObject.FindGameObjectWithTag("Drone").transform.GetChild(0).gameObject;
     }
 }

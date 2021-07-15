@@ -3,7 +3,7 @@ using System;
 
 public class DoorController : MonoBehaviour
 {
-    [SerializeField] private GameObject _doorwayPanel;
+    //[SerializeField] private GameObject _doorwayPanel;
     [SerializeField] private Animator _doorAnimator;
     [SerializeField] private int _id;
 
@@ -15,15 +15,15 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        _doorwayPanel.SetActive(false);
+        //_doorwayPanel.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.tag == "Drone")
         {
-            _doorwayPanel.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E) && transform.GetComponentInChildren<LockPadDestroy>() == null)
+            //_doorwayPanel.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E) && transform.childCount == 4)
             {                
                 GameEvents.current.DoorwayTriggerEnter(_id);                
             }

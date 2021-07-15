@@ -30,10 +30,12 @@ public class Switch_Manager : MonoBehaviour
         _playerMovement = _player.GetComponent<PlayerMovement>();
         _playerCamera = _player.transform.GetChild(0).gameObject;
 
+        _drone = GameObject.FindGameObjectWithTag("Drone");
         _droneInput = _drone.GetComponent<DroneInput>();
         _droneMovement = _drone.GetComponent<DroneMovement>();
         _droneShoot = _drone.GetComponent<DroneShoot>();
         _droneCamera = _drone.transform.GetChild(0).gameObject;
+       
     }
 
     private void Update()

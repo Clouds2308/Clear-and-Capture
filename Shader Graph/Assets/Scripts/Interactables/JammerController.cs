@@ -2,7 +2,7 @@
 
 public class JammerController : MonoBehaviour,IDestructibleByGun
 {
-    [SerializeField] private DroneShoot _manager;   
+    [SerializeField] private DroneShoot _droneShoot;   
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private int _id;
 
@@ -10,6 +10,7 @@ public class JammerController : MonoBehaviour,IDestructibleByGun
     {        
         GameEvents.current.onJammerTriggerEnter += OnJammerEnter;
         GameEvents.current.onJammerTriggeExit += OnJammerExit;
+        _droneShoot = GameObject.FindGameObjectWithTag("Drone").GetComponent<DroneShoot>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +33,7 @@ public class JammerController : MonoBehaviour,IDestructibleByGun
     {
         if (id == this._id)
         {            
-            _manager.canShoot = false;
+            _droneShoot.canShoot = false;
         }        
     }
 
@@ -40,7 +41,7 @@ public class JammerController : MonoBehaviour,IDestructibleByGun
     {
         if(id == this._id)
         {            
-            _manager.canShoot = true;
+            _droneShoot.canShoot = true;
         }
     }
 
@@ -51,7 +52,7 @@ public class JammerController : MonoBehaviour,IDestructibleByGun
 
     public void DestroyOnHit()
     {        
-        _manager.canShoot = true;
+        _droneShoot.canShoot = true;
         GameObject clone = (GameObject)Instantiate(explosionEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(clone, 2f);

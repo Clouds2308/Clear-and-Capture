@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject _drone;
 
     private void Awake()
     {
         instance = this;
+        _drone.SetActive(true);
+        StartCoroutine(DroneReference());
     }
 
     private void Start()
@@ -29,6 +33,12 @@ public class GameManager : MonoBehaviour
     private void HandleRescueZone()
     {
         Debug.Log("Hostage Rescued");
+    }
+
+    IEnumerator DroneReference()
+    {
+        yield return new WaitForSeconds(0.01f);
+        _drone.SetActive(false);
     }
 
 }
