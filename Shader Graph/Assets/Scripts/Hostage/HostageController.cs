@@ -4,8 +4,8 @@ using System.Collections;
 public class HostageController : MonoBehaviour
 {
 
-    [SerializeField] private Hostage_PathAI _followAI;
-    [SerializeField] private Animator _hostageAnimator;
+    private Animator _hostageAnimator;
+    private Hostage_PathAI _followAI;
 
     private bool _canInteract;
     public bool CanInteract
@@ -17,13 +17,14 @@ public class HostageController : MonoBehaviour
         }
     }
 
-    private bool _canFollow;    
+    public bool _canFollow;    
 
 
     private void Start()
     {
         _hostageAnimator = GetComponent<Animator>();
         GameEvents.current.onHostageFree += OnHostageFree;
+        _followAI = GetComponent<Hostage_PathAI>();
     }
 
     private void OnCollisionStay(Collision collision)
