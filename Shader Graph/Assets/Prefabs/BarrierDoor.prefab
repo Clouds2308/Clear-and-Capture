@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4721311686332296213}
   - component: {fileID: 8264064255939875701}
   - component: {fileID: 6009614260268786540}
+  - component: {fileID: 7038346354820330145}
   m_Layer: 0
   m_Name: BarrierDoor
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7038346354820330145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812290642191145769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.364624, y: 12.709124, z: 0.64969826}
+  m_Center: {x: -0.13949394, y: -1.7051294, z: -0.006818831}
