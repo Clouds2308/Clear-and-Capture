@@ -2,7 +2,7 @@
 
 public class WeaponSway : MonoBehaviour
 {
-    [SerializeField] private PlayerInput _input;
+    private PlayerInput _playerInput;
 
     [Header("Position")]
     public float Amount;
@@ -27,8 +27,8 @@ public class WeaponSway : MonoBehaviour
 
     private void CalculateSway()
     {
-        InputX = _input.MouseX * -1;
-        InputY = _input.MouseY * -1;
+        InputX = _playerInput.MouseX * -1;
+        InputY = _playerInput.MouseY * -1;
     }
 
     private void MoveSway()
@@ -53,9 +53,10 @@ public class WeaponSway : MonoBehaviour
     {
         _initialPosition = transform.localPosition;
         _initialRotation = transform.localRotation;
+        _playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CalculateSway();
         MoveSway();

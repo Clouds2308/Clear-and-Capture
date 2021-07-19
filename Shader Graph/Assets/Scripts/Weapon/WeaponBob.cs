@@ -4,8 +4,8 @@ public class WeaponBob : MonoBehaviour
 {
     
     [SerializeField] private Transform WeaponParent;
-    private PlayerInput _input;
-    private PlayerMovement _movement;
+    private PlayerInput _playerInput;
+    //private PlayerMovement _playerMovement;
 
     private Vector3 _weaponParentOrigin;
     private Vector3 _targetWeaponBobPosition;
@@ -22,13 +22,13 @@ public class WeaponBob : MonoBehaviour
     private void Start()
     {
         _weaponParentOrigin = WeaponParent.localPosition;
-        _input = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
-        _movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        _playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
+        //_playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     private void FixedUpdate()
     {
-        if (_input.InputX == 0 && _input.InputZ == 0)
+        if (_playerInput.InputX == 0 && _playerInput.InputZ == 0)
         {
             _bobSpeed = 3f;
             BobWeapon(_idleCounter, 0.005f);
