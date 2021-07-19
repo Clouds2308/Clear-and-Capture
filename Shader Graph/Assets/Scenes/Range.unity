@@ -26760,16 +26760,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7779733fc608bf459e5ae74291888fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _input: {fileID: 0}
-  Amount: 0
-  maxAmount: 0
-  SmoothAmount: 0
-  RotationAmount: 0
-  MaxRotationAmount: 0
-  SmoothRotation: 0
-  rotationX: 0
+  Amount: 0.02
+  maxAmount: 0.04
+  SmoothAmount: 2
+  RotationAmount: 2
+  MaxRotationAmount: 4
+  SmoothRotation: 2
+  rotationX: 1
   rotationY: 0
-  rotationZ: 0
+  rotationZ: 1
 --- !u!1001 &660367955
 PrefabInstance:
   m_ObjectHideFlags: 0
