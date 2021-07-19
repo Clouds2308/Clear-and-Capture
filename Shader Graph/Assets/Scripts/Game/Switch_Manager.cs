@@ -5,18 +5,19 @@ public class Switch_Manager : MonoBehaviour
 {
     private GameObject _player;
     private GameObject _drone;
-    private GameObject _gun;  
-    [SerializeField] private Animator _switchFadeAnimator;
+    private Animator _switchFadeAnimator;
+
+    [SerializeField] private GameObject _gun;  
     [SerializeField] private KeyCode _switchButton;
    
-    [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private PlayerMovement _playerMovement;
-    [SerializeField] private GameObject _playerCamera;
+    private PlayerInput _playerInput;
+    private PlayerMovement _playerMovement;
+    private GameObject _playerCamera;
 
-    [SerializeField] private DroneInput _droneInput;
-    [SerializeField] private DroneMovement _droneMovement;
-    [SerializeField] private DroneShoot _droneShoot;
-    [SerializeField] private GameObject _droneCamera;
+    private DroneInput _droneInput;
+    private DroneMovement _droneMovement;
+    private DroneShoot _droneShoot;
+    private GameObject _droneCamera;
 
     private static bool _isDroning;
     public static bool IsDroning { get => _isDroning; private set => _isDroning = value; }    

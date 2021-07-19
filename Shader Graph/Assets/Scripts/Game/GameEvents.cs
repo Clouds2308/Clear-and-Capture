@@ -11,19 +11,7 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    #region InteractableEvents
-
-    public event Action<int> onKeyPadBreak;
-    public void KeyPadBreak(int id)
-    {
-        onKeyPadBreak?.Invoke(id);
-    }
-
-    //public event Action<int> onMineTriggerEnter;
-    //public void MineTriggerEnter(int id)
-    //{
-    //    onMineTriggerEnter?.Invoke(id);
-    //}    
+    #region InteractableEvents         
 
     public event Action<int> onJammerTriggerEnter;
     public void JammerTriggerEnter(int id)
