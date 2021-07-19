@@ -26689,6 +26689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658631361}
   - component: {fileID: 658631362}
+  - component: {fileID: 658631363}
   m_Layer: 9
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -26733,6 +26734,19 @@ MonoBehaviour:
   _bulletsInMag: 10
   _maxBulletsInMag: 20
   _magCapacity: 10
+--- !u!114 &658631363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658631360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4389a2dd65d5b746926fcc26c809d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponParent: {fileID: 658631361}
 --- !u!1001 &660367955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43588,7 +43602,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079147631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -43669,7 +43683,7 @@ MonoBehaviour:
   _cameraMinimumY: -70
   _cameraMaximumY: 70
   _rotationSmooth: 17
-  _speed: 7
+  _speed: 4.76
   _extraGravity: 36
   _isGrounded: 0
   _groundLayer:
