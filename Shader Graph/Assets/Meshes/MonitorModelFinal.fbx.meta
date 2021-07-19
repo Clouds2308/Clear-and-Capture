@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: b3fd992590949164d8a5d5381ab89e91
+guid: 9a66a11b7e085db4f99414b296ff35a5
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: L_DeskLampMat
-    second: {fileID: 2100000, guid: 9e5801fcb730c044980a28253050678d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +34,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -86,7 +81,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 0.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
