@@ -3,10 +3,10 @@ using UnityEngine.AI;
 
 public class Hostage_PathAI : MonoBehaviour
 {
-    [SerializeField] private Transform  _playerPos;
-    [SerializeField] private Animator _hostageAnimator;
     [SerializeField] float stopThreshold;
 
+    private Transform  _playerPos;
+    private Animator _hostageAnimator;
     private NavMeshAgent agent;
 
     private void Start()

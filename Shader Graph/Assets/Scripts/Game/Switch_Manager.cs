@@ -42,11 +42,6 @@ public class Switch_Manager : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        ChangeState();        
-    }
-
     void DeployDrone()
     {
         _playerInput.enabled = false;       //disable input script on player when droning
@@ -99,5 +94,10 @@ public class Switch_Manager : MonoBehaviour
             }
         }      
     }     
+
+    private void Update()
+    {
+        ChangeState();        
+    }
     
 }
