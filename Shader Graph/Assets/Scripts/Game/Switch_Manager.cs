@@ -6,7 +6,7 @@ public class Switch_Manager : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _drone;
     [SerializeField] private GameObject _gun;  
-    //[SerializeField] private Animator _fadeAnimator;
+    [SerializeField] private Animator _switchFadeAnimator;
    
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -35,6 +35,8 @@ public class Switch_Manager : MonoBehaviour
         _droneMovement = _drone.GetComponent<DroneMovement>();
         _droneShoot = _drone.GetComponent<DroneShoot>();
         _droneCamera = _drone.transform.GetChild(0).gameObject;
+
+        _switchFadeAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         
     }
 
@@ -81,7 +83,7 @@ public class Switch_Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            //_fadeAnimator.SetTrigger("isSwitch");
+            _switchFadeAnimator.SetTrigger("IsSwitch");
 
             if (_isDroning != true)
             {

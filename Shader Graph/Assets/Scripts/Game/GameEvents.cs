@@ -19,11 +19,11 @@ public class GameEvents : MonoBehaviour
         onKeyPadBreak?.Invoke(id);
     }
 
-    public event Action<int> onMineTriggerEnter;
-    public void MineTriggerEnter(int id)
-    {
-        onMineTriggerEnter?.Invoke(id);
-    }    
+    //public event Action<int> onMineTriggerEnter;
+    //public void MineTriggerEnter(int id)
+    //{
+    //    onMineTriggerEnter?.Invoke(id);
+    //}    
 
     public event Action<int> onJammerTriggerEnter;
     public void JammerTriggerEnter(int id)
