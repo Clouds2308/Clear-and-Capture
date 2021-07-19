@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class Switch_Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
-    [SerializeField] private GameObject _drone;
-    [SerializeField] private GameObject _gun;  
+    private GameObject _player;
+    private GameObject _drone;
+    private GameObject _gun;  
     [SerializeField] private Animator _switchFadeAnimator;
+    [SerializeField] private KeyCode _switchButton;
    
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -18,7 +19,7 @@ public class Switch_Manager : MonoBehaviour
     [SerializeField] private GameObject _droneCamera;
 
     private static bool _isDroning;
-    public static bool IsDroning { get => _isDroning; private set => _isDroning = value; }
+    public static bool IsDroning { get => _isDroning; private set => _isDroning = value; }    
 
     private void Start()
     {
@@ -81,19 +82,17 @@ public class Switch_Manager : MonoBehaviour
 
     void ChangeState()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(_switchButton))
         {
             _switchFadeAnimator.SetTrigger("IsSwitch");
 
             if (_isDroning != true)
             {
-                Debug.Log("Droning now");
                 Invoke("DeployDrone", 0.9f);
                 _isDroning = true;
             }
             else if (_isDroning == true)
             {
-                Debug.Log("Droning exit");
                 Invoke("ExitDrone", 0.9f);
                 _isDroning = false;
             }

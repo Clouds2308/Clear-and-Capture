@@ -19714,10 +19714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfe9cc3a161cd04382f24cbf4501979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _drone: {fileID: 0}
-  _gun: {fileID: 658631360}
   _switchFadeAnimator: {fileID: 0}
+  _switchButton: 0
   _playerInput: {fileID: 0}
   _playerMovement: {fileID: 0}
   _playerCamera: {fileID: 0}
@@ -19732,7 +19730,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478871243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36824fb507db35046b027e1eaba4d652, type: 3}
   m_Name: 
@@ -70435,6 +70433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763738460}
   - component: {fileID: 1763738461}
+  - component: {fileID: 1763738462}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -70468,10 +70467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfe9cc3a161cd04382f24cbf4501979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _drone: {fileID: 0}
-  _gun: {fileID: 658631360}
   _switchFadeAnimator: {fileID: 0}
+  _switchButton: 0
   _playerInput: {fileID: 0}
   _playerMovement: {fileID: 0}
   _playerCamera: {fileID: 0}
@@ -70479,6 +70476,19 @@ MonoBehaviour:
   _droneMovement: {fileID: 0}
   _droneShoot: {fileID: 0}
   _droneCamera: {fileID: 0}
+--- !u!114 &1763738462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763738459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0262803c436f0845ad18f9742560097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drone: {fileID: 322571901}
 --- !u!1 &1763878481
 GameObject:
   m_ObjectHideFlags: 0
