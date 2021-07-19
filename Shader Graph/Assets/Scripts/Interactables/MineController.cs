@@ -34,7 +34,7 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     
     private void Start()
     {
-        _player = FindObjectOfType<Player>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         _droneCamera = GameObject.FindGameObjectWithTag("Drone").transform.GetChild(0).gameObject;
         _damageScreenAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
     }
