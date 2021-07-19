@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class TutorailEvents : MonoBehaviour
+public class TutorialEvents : MonoBehaviour
 {
-    public static TutorailEvents current;
+    public static TutorialEvents current;
 
     private void Awake()
     {

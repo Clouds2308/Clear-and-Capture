@@ -11,22 +11,6 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    #region InteractableEvents         
-
-    public event Action<int> onJammerTriggerEnter;
-    public void JammerTriggerEnter(int id)
-    {
-        onJammerTriggerEnter?.Invoke(id);
-    }
-
-    public event Action<int> onJammerTriggeExit;
-    public void JammerTriggerExit(int id)
-    {
-        onJammerTriggeExit?.Invoke(id);
-    }
-
-#endregion
-
     #region PlayerEvents
 
     public event Action onPlayerCaptured; 
