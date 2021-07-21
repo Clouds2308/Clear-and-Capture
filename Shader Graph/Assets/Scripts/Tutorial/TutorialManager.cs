@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -8,16 +9,15 @@ public class TutorialManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         _drone.SetActive(true);
         StartCoroutine(DroneReference());
-
-        instance = this;
-    }   
-
+    }
     IEnumerator DroneReference()
     {
         yield return new WaitForSeconds(0.01f);
         _drone.SetActive(false);
-    }       
-        
+    }
+
 }
