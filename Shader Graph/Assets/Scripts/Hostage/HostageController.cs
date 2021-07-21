@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class HostageController : MonoBehaviour
 {
 
+    [SerializeField] private GameObject _crosshairPanel;
     [SerializeField] private GameObject _hostagePanel;
     [SerializeField] private Image _radialImage;
 
@@ -32,6 +33,7 @@ public class HostageController : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             _hostagePanel.SetActive(true);
+            _crosshairPanel.SetActive(false);
 
             if (Input.GetKey(KeyCode.Q) && _canInteract == true)
             {
@@ -51,6 +53,7 @@ public class HostageController : MonoBehaviour
 
                     _canInteract = false;
                     _hostagePanel.SetActive(false);
+                    _crosshairPanel.SetActive(true);
                     OnHostageFree();
                 }
             }
@@ -81,6 +84,7 @@ public class HostageController : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         _hostagePanel.SetActive(false);
+        _crosshairPanel.SetActive(true);
     }
 
     void OnHostageFree()
