@@ -5465,16 +5465,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109195069}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1081542667}
-  m_RootOrder: 3
+  m_Father: {fileID: 779221498}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 200}
+  m_AnchoredPosition: {x: -880, y: 200}
   m_SizeDelta: {x: 700, y: 10}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &109195071
@@ -10138,6 +10138,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e661a4b9cf2fac4dbc610ceb59e77b8, type: 3}
+--- !u!1 &208164010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 208164011}
+  - component: {fileID: 208164013}
+  - component: {fileID: 208164012}
+  m_Layer: 0
+  m_Name: Practice Range Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208164011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208164010}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 52.58, y: 5.95, z: -7.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &208164012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208164010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: 'Practice Aiming '
+  _tutorialInfo: Fire your Weapon at the Targets.
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 5
+--- !u!65 &208164013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208164010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 9.045797}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -1.8801517}
 --- !u!1001 &208274520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10829,6 +10892,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e16cc1b8be9796744b8e44545a6aca19, type: 3}
+--- !u!1 &226309338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226309339}
+  - component: {fileID: 226309341}
+  - component: {fileID: 226309340}
+  m_Layer: 0
+  m_Name: Exlposive Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226309339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226309338}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 48.89, y: 5.95, z: -37.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &226309340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226309338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Explosive Training
+  _tutorialInfo: 'In field you will be met with many of the traps.
+
+
+    Here you
+    will encounter Landmine and Claymore.
+
+
+    Go Ahead to the semi-room.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 5
+--- !u!65 &226309341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226309338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 5.617591}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -3.5942552}
 --- !u!1001 &228494479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28466,6 +28599,7 @@ MonoBehaviour:
   _titleText: {fileID: 109195071}
   _infoText: {fileID: 811758970}
   _typeDelay: 0.02
+  _selfDestructTime: 5
 --- !u!65 &630022393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34142,6 +34276,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 777906421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &779221497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779221498}
+  m_Layer: 5
+  m_Name: Tutorials
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779221498
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779221497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 109195070}
+  - {fileID: 811758969}
+  m_Father: {fileID: 1081542667}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &782390574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3598164536646371208, guid: 3f8fbe2b2e0fcda49bdf4860e8efd375,
@@ -35470,16 +35641,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811758968}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1081542667}
-  m_RootOrder: 4
+  m_Father: {fileID: 779221498}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -200}
+  m_AnchoredPosition: {x: -880, y: -200}
   m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &811758970
@@ -47492,7 +47663,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079147631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18.2, z: 7}
+  m_LocalPosition: {x: 50.984, y: 6.68, z: -0.05}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 1860057712}
@@ -47756,7 +47927,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -47796,8 +47967,7 @@ RectTransform:
   - {fileID: 1206949835}
   - {fileID: 236339497}
   - {fileID: 478772894}
-  - {fileID: 109195070}
-  - {fileID: 811758969}
+  - {fileID: 779221498}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53353,6 +53523,76 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1222274349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1222809239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222809240}
+  - component: {fileID: 1222809242}
+  - component: {fileID: 1222809241}
+  m_Layer: 0
+  m_Name: LandMineTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1222809240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222809239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.863, y: 5.95, z: -54.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222809241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222809239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: LandMine Room
+  _tutorialInfo: 'Here you will encounter with LandMine.
+
+
+    Ofcourse we practice
+    with Dummy Mines.
+
+
+    Go ahead and Dont be Afraid.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 5
+--- !u!65 &1222809242
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222809239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 5.617591}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -3.5942552}
 --- !u!1001 &1223640488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69965,7 +70205,7 @@ GameObject:
   - component: {fileID: 1612763980}
   - component: {fileID: 1612763979}
   m_Layer: 0
-  m_Name: Weapon Fire
+  m_Name: Weapon Fire Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70004,6 +70244,7 @@ MonoBehaviour:
   _titleText: {fileID: 109195071}
   _infoText: {fileID: 811758970}
   _typeDelay: 0.02
+  _selfDestructTime: 5
 --- !u!65 &1612763980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73632,6 +73873,10 @@ Transform:
   m_Children:
   - {fileID: 630022391}
   - {fileID: 1612763978}
+  - {fileID: 208164011}
+  - {fileID: 226309339}
+  - {fileID: 1222809240}
+  - {fileID: 2035066351}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89593,6 +89838,71 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2035058556}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2035066350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035066351}
+  - component: {fileID: 2035066353}
+  - component: {fileID: 2035066352}
+  m_Layer: 0
+  m_Name: Claymore Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2035066351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035066350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 69.47, y: 5.95, z: -56.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2035066352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035066350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Claymore
+  _tutorialInfo: "Uh - Oh !!!\n\nWhat you just encountered was a Claymore.\n\nYou
+    cannot let mistakes like these compromise real Missions.\n\nYou can destroy Claymores
+    by firing your Weapon at it.\n\nNote:\n\tMaintain distance when firing."
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 5
+--- !u!65 &2035066353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035066350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 3.0400782}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -4.8830113}
 --- !u!1001 &2036748801
 PrefabInstance:
   m_ObjectHideFlags: 0
