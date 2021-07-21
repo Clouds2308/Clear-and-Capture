@@ -19,7 +19,7 @@ public class TargetController : MonoBehaviour, IDestructibleByGun
         if(isFall)
         {
             xRot -= Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(new Vector3(xRot, -90f, 0));
+            transform.rotation = Quaternion.Euler(new Vector3(xRot, transform.rotation.y-90f, transform.rotation.z));
 
             if (xRot <= -90f)
             {
@@ -31,7 +31,7 @@ public class TargetController : MonoBehaviour, IDestructibleByGun
         if(isRise)
         {
             xRot += Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(new Vector3(xRot, -90f, 0));
+            transform.rotation = Quaternion.Euler(new Vector3(xRot, transform.rotation.y - 90f, transform.rotation.z));
 
             if (xRot >= 0f)
                 xRot = 0f;
