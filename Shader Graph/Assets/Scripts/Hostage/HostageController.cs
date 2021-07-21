@@ -32,8 +32,8 @@ public class HostageController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            _hostagePanel.SetActive(true);
-            _crosshairPanel.SetActive(false);
+            _hostagePanel.SetActive(_canInteract);
+            _crosshairPanel.SetActive(!_canInteract);
 
             if (Input.GetKey(KeyCode.Q) && _canInteract == true)
             {
@@ -52,8 +52,6 @@ public class HostageController : MonoBehaviour
                     _radialImage.enabled = false;
 
                     _canInteract = false;
-                    _hostagePanel.SetActive(false);
-                    _crosshairPanel.SetActive(true);
                     OnHostageFree();
                 }
             }
@@ -89,6 +87,8 @@ public class HostageController : MonoBehaviour
 
     void OnHostageFree()
     {
+        _hostagePanel.SetActive(_canInteract);
+        _crosshairPanel.SetActive(!_canInteract);
         _hostageAnimator.SetTrigger("isStand");
         StartCoroutine(walkDelay(4f));
     }

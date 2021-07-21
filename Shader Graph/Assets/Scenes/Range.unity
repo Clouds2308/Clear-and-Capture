@@ -77924,7 +77924,6 @@ GameObject:
   - component: {fileID: 1763738460}
   - component: {fileID: 1763738461}
   - component: {fileID: 1763738462}
-  - component: {fileID: 1763738463}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -77973,18 +77972,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _drone: {fileID: 322571901}
---- !u!114 &1763738463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763738459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86150099c91e66947bda76e45d9cdf1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1763878481
 GameObject:
   m_ObjectHideFlags: 0
@@ -96927,6 +96914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 914763715995065560, guid: 467b08e15bd1652448ac5071283d2128,
+        type: 3}
+      propertyPath: stopThreshold
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 914763715995065567, guid: 467b08e15bd1652448ac5071283d2128,
         type: 3}

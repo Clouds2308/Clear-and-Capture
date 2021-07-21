@@ -5,14 +5,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    
-    [Header("Hostage")]
-    [SerializeField] private HostageController _hostage;
-    [SerializeField] private GameObject _hostagePanel;
-    [SerializeField] private Image _radialImage;    
-    private bool _shouldUpdate;
-    private float _holdTime = 1.0f;
-    private float _maxHoldTime = 1.0f;
 
     //[Header("Player")]
     //[SerializeField] private Player _player;
@@ -42,12 +34,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         //#region EventHandling
-       // GameEvents.current.onHostageColliderEnter += HandleHostageEnter;
-        //GameEvents.current.onHostageColliderExit += HandleHostageExit;
         //GameEvents.current.onPlayerHeatlhChange += HandlePlayerHealthChange;
-        //_radialImage.enabled = false;
-        //_hostage.CanInteract = true;
-
         //#endregion
 
         //_activeScreenResIndex = PlayerPrefs.GetInt("screen res index");
@@ -65,61 +52,7 @@ public class UIManager : MonoBehaviour
     //{
     //    _playerHealthText.text = _player.CurrentHealth.ToString();
     //}
-
-    //#region HostageHandler
-    //private void HandleHostageExit()
-    //{
-    //    _hostagePanel.SetActive(false);
-    //}
-    //private void HandleHostageEnter()
-    //{
-    //    _hostagePanel.SetActive(true);
-
-    //    if (Input.GetKey(KeyCode.Q) && _hostage.CanInteract == true)
-    //    {
-    //        _shouldUpdate = false;
-    //        _radialImage.enabled = true;
-    //        _radialImage.fillAmount = _holdTime;
-
-    //        if(_holdTime>0)
-    //        {
-    //            _holdTime -= Time.deltaTime;
-    //        }
-    //        else
-    //        {
-    //            _holdTime = _maxHoldTime;
-    //            _radialImage.fillAmount = _maxHoldTime;
-    //            _radialImage.enabled = false;
-
-    //            _hostage.CanInteract = false;
-    //            _hostagePanel.SetActive(false);
-    //            GameEvents.current.HostageFree();
-    //        }            
-    //    }
-    //    else
-    //    {
-    //        if(_shouldUpdate)
-    //        {
-    //            _holdTime += Time.deltaTime;
-    //            _radialImage.fillAmount = _holdTime;
-
-    //            if(_holdTime>_maxHoldTime)
-    //            {
-    //                _holdTime = _maxHoldTime;
-    //                _radialImage.fillAmount = _maxHoldTime;
-    //                _radialImage.enabled = false;
-    //                _shouldUpdate = false;
-    //            }
-    //        }
-    //    }
-
-    //    if(Input.GetKeyUp(KeyCode.Q))
-    //    {
-    //        _shouldUpdate = true;
-    //    }
-    //}
-    //#endregion
-
+ 
     #region MenuHandler
     //public void PauseGame()
     //{
