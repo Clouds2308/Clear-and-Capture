@@ -28102,6 +28102,8 @@ Transform:
   - {fileID: 368699851}
   - {fileID: 103310128}
   - {fileID: 1633061389}
+  - {fileID: 1192594439}
+  - {fileID: 897769975}
   m_Father: {fileID: 1173114814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38674,6 +38676,7 @@ Transform:
   - {fileID: 292637417}
   - {fileID: 44918006}
   - {fileID: 1936938172}
+  - {fileID: 1750397269}
   m_Father: {fileID: 522479219}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39141,6 +39144,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896693046}
   m_Mesh: {fileID: -267059760217051132, guid: 89e8bb434f7c2574785ce94ce7cf2017, type: 3}
+--- !u!1001 &897769974
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 622223854}
+    m_Modifications:
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2196107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -62.235
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754046077299919436, guid: 9160c6a34faa3b94ba676ada263e49fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Claymore (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9160c6a34faa3b94ba676ada263e49fa, type: 3}
+--- !u!4 &897769975 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 897769974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &898139621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43754,6 +43832,76 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 999837552}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1000359216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000359217}
+  - component: {fileID: 1000359219}
+  - component: {fileID: 1000359218}
+  m_Layer: 0
+  m_Name: UpperStairsTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000359217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000359216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 92.05, y: 5.95, z: -60.417}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000359218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000359216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Good Job
+  _tutorialInfo: 'Hooray!!!
+
+
+    You finished your basic training routine.
+
+
+    Head
+    Upstairs for Advanced Training.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 5
+--- !u!65 &1000359219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000359216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 6.7322197}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -2.3863316}
 --- !u!1001 &1000581531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47663,7 +47811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079147631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.984, y: 6.68, z: -0.05}
+  m_LocalPosition: {x: 63.526, y: 18.192, z: -13.04}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 1860057712}
@@ -48081,6 +48229,73 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 719929017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084215303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084215304}
+  - component: {fileID: 1084215306}
+  - component: {fileID: 1084215305}
+  m_Layer: 0
+  m_Name: DroneLandmineInteractionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084215304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084215303}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 34.95, y: 17.918, z: -19.403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1084215305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084215303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Drone Room Clearing
+  _tutorialInfo: 'Tactical Drones can clear Landmines by Triggering them.
+
+
+    Tactical
+    Drones are effective when clearing a room minimizing Agents risk of Injury.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.01
+  _selfDestructTime: 8
+--- !u!65 &1084215306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084215303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0444796, y: 3.543457, z: 3.7149186}
+  m_Center: {x: -0.5388185, y: 0.88038254, z: -2.0065093}
 --- !u!1001 &1084385472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52162,6 +52377,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1192926669}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1192594438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 622223854}
+    m_Modifications:
+    - target: {fileID: 291593370276630622, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_Name
+      value: LandMine (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73.724
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -59.448
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ca50961f8e080d4abb5697b745dbbbe, type: 3}
+--- !u!4 &1192594439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192594438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1192926669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53134,6 +53424,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1203054179}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205064004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205064005}
+  - component: {fileID: 1205064007}
+  - component: {fileID: 1205064006}
+  m_Layer: 0
+  m_Name: DroneJammerInteractionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205064005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205064004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.108, y: 17.918, z: -10.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205064006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205064004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Drone Obstacles
+  _tutorialInfo: 'Tactical Drones can be Jammed by Special Grade Jammers.
+
+
+    Jammer
+    Disrupts the Camera feed of Drones.
+
+
+    Drones cannot Shoot when in a Jammer
+    Radius
+
+
+    You can destroy jammers by shooting it with your Weapon.
+
+
+    Clear
+    this room of both the Jammers.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.01
+  _selfDestructTime: 10
+--- !u!65 &1205064007
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205064004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0444796, y: 3.543457, z: 10.270315}
+  m_Center: {x: -0.5388185, y: 0.88038254, z: -1.6660051}
 --- !u!1 &1206949834
 GameObject:
   m_ObjectHideFlags: 0
@@ -59130,8 +59498,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0961778, y: 1.7818762, z: 0.5266351}
-  m_Center: {x: 0.00000020251619, y: -0.000000021103592, z: 0.26425916}
+  m_Size: {x: 1.97155, y: 1.4680207, z: 0.52663517}
+  m_Center: {x: -0.062313646, y: -0.15692776, z: 0.26425916}
 --- !u!4 &1352447348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a622da05eabe2cc42a2acbcc9103f1ab,
@@ -59852,7 +60220,7 @@ PrefabInstance:
     - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.98
+      value: 48.79
       objectReference: {fileID: 0}
     - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
         type: 3}
@@ -59862,7 +60230,7 @@ PrefabInstance:
     - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.92
+      value: -39.8
       objectReference: {fileID: 0}
     - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
         type: 3}
@@ -62085,6 +62453,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1441557913}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1442360087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442360088}
+  - component: {fileID: 1442360090}
+  - component: {fileID: 1442360089}
+  m_Layer: 0
+  m_Name: DroneRoom Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1442360088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442360087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 69.829, y: 17.918, z: -30.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1442360089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442360087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Drone Basics
+  _tutorialInfo: 'Z - Deploy Tactical Drone(Toggle between Player and Drone)
+
+    Space
+    - Jump
+
+
+    Drones help an Agent navigate through narrow corners and clear ground
+    without risk of being hurt.
+
+
+    Approach and Try to Open the High Security
+    Door on your Left.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.02
+  _selfDestructTime: 10
+--- !u!65 &1442360090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442360087}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0115235, y: 2.886753, z: 6.7322197}
+  m_Center: {x: -0.05529654, y: 0.55203056, z: -2.3863316}
 --- !u!1001 &1442425917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71256,7 +71698,7 @@ PrefabInstance:
     - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 73.127
+      value: 73.196
       objectReference: {fileID: 0}
     - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
         type: 3}
@@ -71266,7 +71708,7 @@ PrefabInstance:
     - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.199
+      value: -64.246
       objectReference: {fileID: 0}
     - target: {fileID: 4940918039219622134, guid: 9160c6a34faa3b94ba676ada263e49fa,
         type: 3}
@@ -73877,6 +74319,11 @@ Transform:
   - {fileID: 226309339}
   - {fileID: 1222809240}
   - {fileID: 2035066351}
+  - {fileID: 1000359217}
+  - {fileID: 1442360088}
+  - {fileID: 1774422588}
+  - {fileID: 1205064005}
+  - {fileID: 1084215304}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76257,6 +76704,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 811bf22db94faad418fb6fdfffe14569, type: 3}
+--- !u!1 &1733543784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c5a469c4dccb23348803df5a8b19409c,
+    type: 3}
+  m_PrefabInstance: {fileID: 82826877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1733543785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733543784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3551667, y: 3.1322122, z: 2.8697286}
+  m_Center: {x: -0.38263944, y: -0.38974375, z: 1.4251168}
 --- !u!4 &1741828882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1042096472079585563, guid: 8f910e295e4647b4ea2ea845dfffd5a0,
@@ -76422,6 +76888,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1326801304891770562, guid: ad60a1ba46daf614fa17b1c7f82f6b0d,
     type: 3}
   m_PrefabInstance: {fileID: 1577112802816098561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1750397268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 887928239}
+    m_Modifications:
+    - target: {fileID: 115313524, guid: 45cb04db3a488154d8ca5073e245d41f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453299324205346108, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_Name
+      value: Jammer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453299324205346108, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7029991
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -48.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45cb04db3a488154d8ca5073e245d41f, type: 3}
+--- !u!4 &1750397269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2261080402794084230, guid: 45cb04db3a488154d8ca5073e245d41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750397268}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1754732476
 PrefabInstance:
@@ -77731,6 +78281,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1773040761}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1774422587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774422588}
+  - component: {fileID: 1774422590}
+  - component: {fileID: 1774422589}
+  m_Layer: 0
+  m_Name: DroneDoorInteractionTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1774422588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774422587}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 70.835, y: 17.918, z: -19.303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1678250650}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1774422589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774422587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9521dc995f4f4b864ca81d7510656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: Drone Interaction
+  _tutorialInfo: 'Left Mouse - Fire Laser
+
+
+    Tactical Drones can fire Laser shots
+    to Destroy High Securiy Doorpads.
+
+
+    Take your Drone to other side of the
+    HIgh Security Door.
+
+
+    Get close to Lockpad on Door and Fire a Laser.'
+  _titleText: {fileID: 109195071}
+  _infoText: {fileID: 811758970}
+  _typeDelay: 0.01
+  _selfDestructTime: 7
+--- !u!65 &1774422590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774422587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1413627, y: 2.886753, z: 2.0349798}
+  m_Center: {x: -0.9903772, y: 0.55203056, z: -1.93207}
 --- !u!1001 &1775873986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89512,7 +90136,7 @@ PrefabInstance:
     - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.486
+      value: -64.173
       objectReference: {fileID: 0}
     - target: {fileID: 291593370276630625, guid: 7ca50961f8e080d4abb5697b745dbbbe,
         type: 3}
@@ -89864,7 +90488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035066350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.47, y: 5.95, z: -56.6}
+  m_LocalPosition: {x: 68.433, y: 5.95, z: -55.899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1678250650}
@@ -89901,8 +90525,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115235, y: 2.886753, z: 3.0400782}
-  m_Center: {x: -0.05529654, y: 0.55203056, z: -4.8830113}
+  m_Size: {x: 1.2934268, y: 2.886753, z: 3.0400782}
+  m_Center: {x: -0.4143449, y: 0.55203056, z: -4.8830113}
 --- !u!1001 &2036748801
 PrefabInstance:
   m_ObjectHideFlags: 0
