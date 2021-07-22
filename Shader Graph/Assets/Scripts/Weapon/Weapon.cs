@@ -25,6 +25,8 @@ public class Weapon : MonoBehaviour
     public int BulletInMag { get => _bulletsInMag; private set => _bulletsInMag = value; }
     public int MaxBulletsInMag { get => _maxBulletsInMag; private set => _maxBulletsInMag = value; }
 
+    public ParticleSystem MuzzleFlash;
+    public ParticleSystem BulletTracer;
     // public ParticleSystem muzzleFlash;
     //public GameObject impactEffect;
     
@@ -49,6 +51,9 @@ public class Weapon : MonoBehaviour
     {
         _handsAnimator.SetTrigger("IsFire");
         _gunAnimator.SetTrigger("IsFire");
+
+        MuzzleFlash.Play();
+        BulletTracer.Play();
 
         BulletInMag -= 1;
         RaycastHit _hit;
