@@ -47,12 +47,14 @@ public class Switch_Manager : MonoBehaviour
         _playerInput.enabled = false;       //disable input script on player when droning
         _playerMovement.enabled = false;    //disable movement script on player when droning
         _playerCamera.SetActive(false);     //disable camera on player        
+        _playerCamera.GetComponent<AudioListener>().enabled = false;    //mute sounds for player when droning
         _gun.GetComponent<Weapon>().enabled = false;                   //disable gunfire script on gun when droning
 
         _droneInput.enabled = true;         //enable input script on drone when droning
         _droneMovement.enabled = true;       //enable movement script on drone when droning
         _droneShoot.enabled = true;               //enable shoot script on drone when droning
-        _drone.transform.GetChild(0).gameObject.SetActive(true);        //enable camera on drone
+        _droneCamera.SetActive(true);       //enable camera on drone
+        _droneCamera.GetComponent<AudioListener>().enabled = true;  //enable audio for drone
 
         if (!_drone.activeInHierarchy)
         {
@@ -67,12 +69,14 @@ public class Switch_Manager : MonoBehaviour
         _playerInput.enabled = true;        //enable input script on player when not droning
         _playerMovement.enabled = true;     //enable movement script on player when not droning
         _playerCamera.SetActive(true);       //enable camera on player
-        _gun.GetComponent<Weapon>().enabled = true;                   //enable gunfire script on gun when not droning
+        _playerCamera.GetComponent<AudioListener>().enabled = true;    //enable sounds for player when not droning
+        _gun.GetComponent<Weapon>().enabled = true;                   //enable gunfire script on gun when not droning        
 
         _droneInput.enabled = false;        //disable input script on drone when not droning
         _droneMovement.enabled = false;     //disable movement script on drone when not droning
         _droneShoot.enabled = false;        //disable shoot script on drone when not droning
         _droneCamera.SetActive(false);      //disable camera on drone
+        _droneCamera.GetComponent<AudioListener>().enabled = false;  //disable audio for drone
 
     }
 

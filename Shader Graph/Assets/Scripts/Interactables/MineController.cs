@@ -9,6 +9,8 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     private GameObject _droneCamera;
     private Player _player;
 
+    public AudioClip ExplosionAudio;
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -28,6 +30,7 @@ public class MineController : MonoBehaviour,IDestructibleByDrone
     public void DestroyOnHit()
     {
         GameObject clone  = Instantiate(explosionEffect, transform.position, Quaternion.identity) as GameObject;
+        AudioManager.instance.PlaySound(ExplosionAudio, transform.position);
         Destroy(this.gameObject);
         Destroy(clone, 2f);
     }    

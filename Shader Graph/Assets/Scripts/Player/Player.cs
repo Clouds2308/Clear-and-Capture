@@ -12,12 +12,12 @@ public class Player : MonoBehaviour,IDamageable
     {
 
         _currPlayerHealth -= (int) damage;
-        GameEvents.current.PlayerHealthChange(); //raise event when player heatlh changes
+       // GameEvents.current.PlayerHealthChange(); //raise event when player heatlh changes
 
 
         if (_currPlayerHealth <= 0)
         {
-            GameEvents.current.PlayerDead();    //raise event when player dies
+            //GameEvents.current.PlayerDead();    //raise event when player dies
         }
     }   
 
