@@ -8722,7 +8722,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170392292}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &170392296
 Camera:
   m_ObjectHideFlags: 0
@@ -29892,11 +29892,14 @@ MonoBehaviour:
   _weaponRange: 20
   _timeToReload: 2.96
   _weaponDamage: 10
-  _bulletsInMag: 10
+  _bulletsInMag: 5
   _maxBulletsInMag: 20
-  _magCapacity: 10
-  MuzzleFlash: {fileID: 1475521705}
+  _magCapacity: 5
   BulletTracer: {fileID: 653636286}
+  MuzzleFlash: {fileID: 1475521705}
+  ShootAudio: {fileID: 8300000, guid: 87381d210f54ce143bb11ecdbdad3035, type: 3}
+  CasingDropAudio: {fileID: 8300000, guid: a74e28a2b96a5b64fb608f6b3e852e19, type: 3}
+  DryFireAudio: {fileID: 8300000, guid: 89f266435d527ca42a87eb2f163daf2f, type: 3}
 --- !u!114 &658631363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48387,7 +48390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079147631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7783062, y: 18.11, z: -39}
+  m_LocalPosition: {x: 47.884804, y: 6.664, z: -43.22077}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 1860057712}
@@ -79297,6 +79300,7 @@ GameObject:
   - component: {fileID: 1763738460}
   - component: {fileID: 1763738461}
   - component: {fileID: 1763738462}
+  - component: {fileID: 1763738463}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -79345,6 +79349,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _drone: {fileID: 322571901}
+--- !u!114 &1763738463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763738459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f0668231786b142bf937cd8aa1edf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1763878481
 GameObject:
   m_ObjectHideFlags: 0

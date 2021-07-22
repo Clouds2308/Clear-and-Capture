@@ -19,15 +19,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] private int _bulletsInMag = 10;    //bullets present in current magazine
     [SerializeField] private int _maxBulletsInMag = 30; //max bullets in all magazine
     [SerializeField] private int _magCapacity = 10;     //capacity of a magazine
-    private bool _isMagEmpty;
-    private bool _isWeaponEmpty;
+    private bool _isMagEmpty;   // check bullets in current magazine
+    private bool _isWeaponEmpty;    //check bullets total
 
+    [Header("Effects")]
+    public ParticleSystem BulletTracer;
+    public ParticleSystem MuzzleFlash;
+    public AudioClip ShootAudio;
+    public AudioClip CasingDropAudio;
+    public AudioClip DryFireAudio;
     public int BulletInMag { get => _bulletsInMag; private set => _bulletsInMag = value; }
     public int MaxBulletsInMag { get => _maxBulletsInMag; private set => _maxBulletsInMag = value; }
 
-    public ParticleSystem MuzzleFlash;
-    public ParticleSystem BulletTracer;
-    // public ParticleSystem muzzleFlash;
     //public GameObject impactEffect;
     
     private void Update()
@@ -40,11 +43,16 @@ public class Weapon : MonoBehaviour
             StartCoroutine(ReloadWeapon());            
         }
 
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && !_isMagEmpty &&_canFire)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire &&_canFire)
         {
-            nextTimeToFire = Time.time + 1f/_fireRate;
-            FireWeapon();
-        }               
+            if (!_isMagEmpty)
+            {
+                nextTimeToFire = Time.time + 1f / _fireRate;
+                FireWeapon();
+            }
+            else
+                AudioManager.instance.PlaySound(DryFireAudio, transform.position);
+        }                
     }
 
     void FireWeapon()
@@ -54,6 +62,8 @@ public class Weapon : MonoBehaviour
 
         MuzzleFlash.Play();
         BulletTracer.Play();
+        AudioManager.instance.PlaySound(ShootAudio, transform.position);
+        AudioManager.instance.PlaySound(CasingDropAudio, transform.position);
 
         BulletInMag -= 1;
         RaycastHit _hit;
