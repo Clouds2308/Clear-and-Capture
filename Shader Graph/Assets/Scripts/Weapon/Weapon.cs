@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     private float _fireRate = 4f;  //firerate of weapon
     private float nextTimeToFire = 0f;
     private bool _canFire = true;
+    private bool _canReload = true;
 
     [Header("Bullets")]
     [SerializeField] private int _bulletsInMag = 10;    //bullets present in current magazine
@@ -38,7 +39,7 @@ public class Weapon : MonoBehaviour
         _isMagEmpty = (BulletInMag == 0);
         _isWeaponEmpty = (MaxBulletsInMag == 0);
 
-        if (Input.GetKeyDown(KeyCode.R) && _isMagEmpty && !_isWeaponEmpty)
+        if (Input.GetKeyDown(KeyCode.R) && _isMagEmpty && !_isWeaponEmpty && _canReload)
         {
             StartCoroutine(ReloadWeapon());            
         }
@@ -89,6 +90,7 @@ public class Weapon : MonoBehaviour
         _handsAnimator.SetTrigger("IsReload");
         _gunAnimator.SetTrigger("IsReload");
         _canFire = false;
+        _canReload = false;
 
         if(MaxBulletsInMag<=0)
         {
@@ -101,6 +103,12 @@ public class Weapon : MonoBehaviour
         MaxBulletsInMag -= _magCapacity;
         BulletInMag += _magCapacity;
         _canFire = true;
+        _canReload = true;
+    }
+
+    public void PickupAmmo(int amount)
+    {
+        _maxBulletsInMag += amount;
     }
        
 }
