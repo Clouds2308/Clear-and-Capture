@@ -31,6 +31,7 @@ public class Weapon : MonoBehaviour
     public AudioClip ShootAudio;
     public AudioClip CasingDropAudio;
     public AudioClip DryFireAudio;
+    public AudioClip ReloadAudio;
     public int BulletInMag { get => _bulletsInMag; private set => _bulletsInMag = value; }
     public int MaxBulletsInMag { get => _maxBulletsInMag; private set => _maxBulletsInMag = value; }
     
@@ -89,6 +90,7 @@ public class Weapon : MonoBehaviour
     {
         _handsAnimator.SetTrigger("IsReload");
         _gunAnimator.SetTrigger("IsReload");
+        AudioManager.instance.PlaySound(ReloadAudio, transform.position);
         _canFire = false;
         _canReload = false;
 

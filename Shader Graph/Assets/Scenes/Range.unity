@@ -30447,6 +30447,7 @@ MonoBehaviour:
   ShootAudio: {fileID: 8300000, guid: 87381d210f54ce143bb11ecdbdad3035, type: 3}
   CasingDropAudio: {fileID: 8300000, guid: a74e28a2b96a5b64fb608f6b3e852e19, type: 3}
   DryFireAudio: {fileID: 8300000, guid: 89f266435d527ca42a87eb2f163daf2f, type: 3}
+  ReloadAudio: {fileID: 8300000, guid: 9c05dfb500015e741a907d1c899aebaa, type: 3}
 --- !u!114 &658631363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67491,7 +67492,7 @@ PrefabInstance:
     - target: {fileID: 1611179162520996752, guid: 94c1f655e4446024ba3996112c4c84c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.35
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 1611179162520996752, guid: 94c1f655e4446024ba3996112c4c84c2,
         type: 3}
