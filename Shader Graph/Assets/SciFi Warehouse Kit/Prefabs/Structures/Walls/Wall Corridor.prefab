@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 1892847821669022190}
   - component: {fileID: 1892847821668055854}
   - component: {fileID: 3815888047148569626}
-  - component: {fileID: 6416540286337579715}
-  - component: {fileID: 3411418385748254384}
   m_Layer: 0
   m_Name: Wall Corridor
   m_TagString: Untagged
@@ -95,29 +93,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.400003, y: 4.478507, z: 6.000289}
   m_Center: {x: 0.049996123, y: 6.7607503, z: 2.9999905}
---- !u!65 &6416540286337579715
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892847821666117102}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.400003, y: 4.5195036, z: 0.50754213}
-  m_Center: {x: 0.049996123, y: 2.258944, z: 5.7463636}
---- !u!65 &3411418385748254384
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892847821666117102}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.400003, y: 4.5169563, z: 0.8171425}
-  m_Center: {x: 0.049996123, y: 2.2576704, z: 0.40841722}

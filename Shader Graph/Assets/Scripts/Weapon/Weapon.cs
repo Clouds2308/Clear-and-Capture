@@ -4,6 +4,7 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Camera _playerCam;
+    //[SerializeField] private LayerMask _layerMask;
 
     [Header("Weapon")]
     [SerializeField] private Animator _handsAnimator;
@@ -25,13 +26,12 @@ public class Weapon : MonoBehaviour
     [Header("Effects")]
     public ParticleSystem BulletTracer;
     public ParticleSystem MuzzleFlash;
+    public GameObject ImpactEffect;
     public AudioClip ShootAudio;
     public AudioClip CasingDropAudio;
     public AudioClip DryFireAudio;
     public int BulletInMag { get => _bulletsInMag; private set => _bulletsInMag = value; }
     public int MaxBulletsInMag { get => _maxBulletsInMag; private set => _maxBulletsInMag = value; }
-
-    //public GameObject impactEffect;
     
     private void Update()
     {
@@ -79,8 +79,8 @@ public class Weapon : MonoBehaviour
             if(_destructible!=null)
                 _destructible.DestroyOnHit();
                                     
-            //GameObject impactGo = Instantiate(impactEffect, _hit.point, Quaternion.LookRotation(_hit.normal));
-            //Destroy(impactGo, 1f);
+            GameObject impactGo = Instantiate(ImpactEffect, _hit.point, Quaternion.LookRotation(_hit.normal));
+            Destroy(impactGo, 1f);
         }
     }   
 

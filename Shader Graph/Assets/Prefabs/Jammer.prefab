@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 115313525}
   - component: {fileID: 115313527}
   - component: {fileID: 115313526}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,9 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee60aeeaf19cb1d4abc1b8c5ffdc2e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
   explosionEffect: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
-  _id: 0
 --- !u!1 &7613022811500598757
 GameObject:
   m_ObjectHideFlags: 0
