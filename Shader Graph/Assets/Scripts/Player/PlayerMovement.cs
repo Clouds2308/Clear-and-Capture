@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
     private float _cameraRotationY;  //rotation of camera on y axis
     private Vector3 _directionalIntentX; 
     private Vector3 _directionalIntentZ;
+    private bool IsWalking = false;
+
+    [Header("Effects")]
+    [SerializeField] public List<AudioClip> FootStepAudio = new List<AudioClip>();
 
     public bool IsGrounded
     {
@@ -89,6 +95,10 @@ public class PlayerMovement : MonoBehaviour
     {        
         //LookAround();
         GroundCheck();
+
+        if (_inputScript.InputX != 0 || _inputScript.InputZ != 0)
+            if(!IsWalking)
+            StartCoroutine(PlayFootStepSound(0.6f));
     }
 
     private void FixedUpdate()
@@ -100,5 +110,17 @@ public class PlayerMovement : MonoBehaviour
     private void LateUpdate()
     {
         LookAround();
+    }
+
+    IEnumerator PlayFootStepSound(float timer)
+    {
+        var randomIndex = Random.Range(0, FootStepAudio.Count);
+        AudioManager.instance.PlaySound(FootStepAudio[randomIndex], transform.position);
+        IsWalking = true;
+
+        yield return new WaitForSeconds(timer);
+
+        IsWalking = false;
+
     }
 }

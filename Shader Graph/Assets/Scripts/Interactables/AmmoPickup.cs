@@ -3,8 +3,10 @@
 public class AmmoPickup : MonoBehaviour
 {
     [SerializeField] private int _bulletCount;
-
     private Weapon _weapon;
+
+    [Header("Effects")]
+    [SerializeField] private AudioClip AmmoPickupAudio;
 
     private void Start()
     {
@@ -20,7 +22,8 @@ public class AmmoPickup : MonoBehaviour
 
             foreach(Transform child in transform)
             {
-                Destroy(child.gameObject, 1f);
+                child.gameObject.SetActive(false);
+                AudioManager.instance.PlaySound(AmmoPickupAudio, transform.position);
             }
         }
     }

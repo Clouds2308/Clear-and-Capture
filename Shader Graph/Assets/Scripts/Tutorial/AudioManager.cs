@@ -3,6 +3,10 @@
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
+    //public AudioClip HoverAudio;
+    //public AudioClip ClickAudio;
+
     public enum AudioChannel { Master, Music, Sfx};
 
     public float masterVolumePercent { get; private set; }
@@ -27,7 +31,7 @@ public class AudioManager : MonoBehaviour
     {
         if (clip != null)
             AudioSource.PlayClipAtPoint(clip, pos, sfxVolumePercent * masterVolumePercent);
-    }
+    }   
 
     public void SetVoulme(float volumePercent,AudioChannel channel)
     {
@@ -44,6 +48,11 @@ public class AudioManager : MonoBehaviour
                 break;
         }
 
+    }
+    
+    public void OnPointerEnter()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
 }
