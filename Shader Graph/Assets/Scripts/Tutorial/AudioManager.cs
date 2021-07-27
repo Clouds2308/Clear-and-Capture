@@ -5,9 +5,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public enum AudioChannel { Master, Music, Sfx};
 
-    float masterVolumePercent = .2f;
-    float musicVolumePercent = 1f;
-    float sfxVolumePercent = 1f;
+    public float masterVolumePercent { get; private set; }
+    public float musicVolumePercent { get; private set; }
+    public float sfxVolumePercent { get; private set; }
 
     private void Awake()
     {
@@ -16,7 +16,11 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         else
-            instance = this;    
+            instance = this;
+
+        masterVolumePercent = 1f;
+        musicVolumePercent = 1f;
+        sfxVolumePercent = 0.3f;
     }
 
     public void PlaySound(AudioClip clip , Vector3 pos)
