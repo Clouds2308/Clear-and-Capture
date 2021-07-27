@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TutorialManager : MonoBehaviour
@@ -79,6 +80,11 @@ public class TutorialManager : MonoBehaviour
         Time.timeScale = 1f;
         LockCursor();
         _weapon.enabled = true;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void SetMasterVolume(float value)
