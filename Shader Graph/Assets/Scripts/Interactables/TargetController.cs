@@ -18,22 +18,22 @@ public class TargetController : MonoBehaviour, IDestructibleByGun
     {
         if(isFall)
         {
-            xRot -= Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(new Vector3(xRot, transform.rotation.y-90f, transform.rotation.z));
+            xRot += Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(new Vector3(xRot, 90, transform.rotation.z));
 
-            if (xRot <= -90f)
+            if (xRot >= 90f)
             {
-                xRot = -90f;
+                xRot = 90f;
                 StartCoroutine(timer());
             }
         }
         
         if(isRise)
         {
-            xRot += Time.deltaTime * speed;
-            transform.rotation = Quaternion.Euler(new Vector3(xRot, transform.rotation.y - 90f, transform.rotation.z));
+            xRot -= Time.deltaTime * speed;
+            transform.rotation = Quaternion.Euler(new Vector3(xRot, 90, transform.rotation.z));
 
-            if (xRot >= 0f)
+            if (xRot <= 0f)
                 xRot = 0f;
         }
     }
