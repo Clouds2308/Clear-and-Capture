@@ -21,6 +21,7 @@ public class Tutorial : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            GetComponent<BoxCollider>().enabled = false;
             _titleText.SetText(_title);
             StartCoroutine(TypeInfo(_tutorialInfo));
         }

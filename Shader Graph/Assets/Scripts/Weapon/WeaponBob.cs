@@ -5,7 +5,6 @@ public class WeaponBob : MonoBehaviour
     
     [SerializeField] private Transform WeaponParent;
     private PlayerInput _playerInput;
-    //private PlayerMovement _playerMovement;
 
     private Vector3 _weaponParentOrigin;
     private Vector3 _targetWeaponBobPosition;

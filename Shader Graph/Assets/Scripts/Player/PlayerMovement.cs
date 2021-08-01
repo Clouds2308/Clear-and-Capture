@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [SerializeField] private float _cameraSensitivity = 5f;  //sensitivity of camera movement
+    public float CameraSensitivity { get => _cameraSensitivity; set => _cameraSensitivity = value; }
     [SerializeField] private float _cameraMinimumY = -70f;   //minimum camera clamp   
     [SerializeField] private float _cameraMaximumY = 70f;    //maximum camera clamp
     [SerializeField] private float _rotationSmooth = 10f;    //smooth damp for camera rotation
@@ -26,12 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsWalking = false;
 
     [Header("Effects")]
-    [SerializeField] public List<AudioClip> FootStepAudio = new List<AudioClip>();
-
-    public bool IsGrounded
-    {
-        get { return _isGrounded; }
-    }
+    [SerializeField] public List<AudioClip> FootStepAudio = new List<AudioClip>();    
 
     #region CameraControl
     void LookAround()
@@ -75,15 +71,7 @@ public class PlayerMovement : MonoBehaviour
     void AdditionalGravity()
     {
         _playerRb.AddForce(Vector3.down * _extraGravity);
-    }
-
-    void GroundCheck()
-    {
-        float radius = GetComponent<CapsuleCollider>().radius * 0.9f;
-        Vector3 pos = transform.position + Vector3.down * (radius * 0.9f);
-
-        _isGrounded = Physics.CheckSphere(pos, radius, _groundLayer);
-    }
+    }   
 
     private void Start()
     {
@@ -93,8 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {        
-        //LookAround();
-        GroundCheck();
 
         if (_inputScript.InputX != 0 || _inputScript.InputZ != 0)
             if(!IsWalking)

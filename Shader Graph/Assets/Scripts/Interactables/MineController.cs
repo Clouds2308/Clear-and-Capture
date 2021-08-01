@@ -2,13 +2,14 @@
 
 public class MineController : MonoBehaviour,IDestructibleByDrone
 {
-    public GameObject explosionEffect;
 
     [SerializeField] private Animator _damageScreenAnimator;
     [SerializeField] private float _mineExplosionDamage = 10;
     private GameObject _droneCamera;
     private Player _player;
 
+    [Header("Effects")]
+    [SerializeField] private GameObject explosionEffect;
     public AudioClip ExplosionAudio;
 
 

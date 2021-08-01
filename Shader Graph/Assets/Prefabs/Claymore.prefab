@@ -1296,8 +1296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1720eba7c7bc043944575b66499448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyEffecet: {fileID: 100006, guid: 2e7e92bc7175b744ea40878dedfa79e4, type: 3}
+  _damageScreenAnimator: {fileID: 0}
   _claymoreExplosionDamage: 0
+  destroyEffecet: {fileID: 100006, guid: 2e7e92bc7175b744ea40878dedfa79e4, type: 3}
+  ExplosionAudio: {fileID: 8300000, guid: 9eb351d13edb88b44969fec09f474223, type: 3}
 --- !u!1 &6277711298986432011
 GameObject:
   m_ObjectHideFlags: 0

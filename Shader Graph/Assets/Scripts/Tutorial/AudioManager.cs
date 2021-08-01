@@ -4,9 +4,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    //public AudioClip HoverAudio;
-    //public AudioClip ClickAudio;
-
     public enum AudioChannel { Master, Music, Sfx};
 
     public float masterVolumePercent { get; private set; }
@@ -49,10 +46,5 @@ public class AudioManager : MonoBehaviour
         }
 
     }
-    
-    public void OnPointerEnter()
-    {
-        GetComponent<AudioSource>().Play();
-    }
-
+      
 }

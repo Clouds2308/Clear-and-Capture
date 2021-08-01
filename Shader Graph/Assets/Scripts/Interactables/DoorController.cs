@@ -9,11 +9,11 @@ public class DoorController : MonoBehaviour
     private void Start()
     {
         _doorAnimator = GetComponent<Animator>();
-    }    
+    }       
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Drone") && transform.childCount == 4 && !doorOpen)
+        if (transform.childCount == 4 && !doorOpen)
         {
             StartCoroutine(DoorOpen());
         }

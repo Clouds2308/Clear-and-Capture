@@ -4,13 +4,17 @@ using System;
 public class ClaymoreController : MonoBehaviour, IDestructibleByGun
 {
     private Player _player;
-    //[SerializeField] private Animator _damageScreenAnimator;
-    [SerializeField] private GameObject destroyEffecet;
+    [SerializeField] private Animator _damageScreenAnimator;
     [SerializeField] private float _claymoreExplosionDamage;
 
+    [Header("Effects")]
+    [SerializeField] private GameObject destroyEffecet;
+    public AudioClip ExplosionAudio;
+
     public void DestroyOnHit()
-    {        
-        GameObject clone = (GameObject) Instantiate(destroyEffecet, transform.position, Quaternion.identity);
+    {
+        GameObject clone = Instantiate(destroyEffecet, transform.position, Quaternion.identity) as GameObject;
+        AudioManager.instance.PlaySound(ExplosionAudio, transform.position);
         Destroy(this.gameObject,0.1f);
         Destroy(clone, 2f);
     }
@@ -25,14 +29,15 @@ public class ClaymoreController : MonoBehaviour, IDestructibleByGun
 
     void PlayerEnterClaymore()
     {
-        //_damageScreenAnimator.SetTrigger("isPlayerDamage");
+        _damageScreenAnimator.SetTrigger("IsPlayerDamage");
         _player.TakeDamage(_claymoreExplosionDamage);        
         DestroyOnHit();
     }
 
     private void Start()
     {
-        _player = FindObjectOfType<Player>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        _damageScreenAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
     }
 
 }
