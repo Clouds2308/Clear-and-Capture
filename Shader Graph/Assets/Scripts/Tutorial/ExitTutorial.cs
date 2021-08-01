@@ -11,11 +11,12 @@ public class ExitTutorial : MonoBehaviour
         _weapon = FindObjectOfType<Weapon>().GetComponent<Weapon>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if(collision.transform.CompareTag("Player"))
         {
-            _exitPanel.SetActive(true);            
+            _exitPanel.SetActive(true);
+            _weapon.enabled = false;         
             TutorialManager.instance.UnLockCursor();
         }
     }
@@ -23,17 +24,13 @@ public class ExitTutorial : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         _exitPanel.SetActive(false);
+        _weapon.enabled = true;
         TutorialManager.instance.LockCursor();
     }
 
     public void RestartTutorial()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
+    }    
 
 }
