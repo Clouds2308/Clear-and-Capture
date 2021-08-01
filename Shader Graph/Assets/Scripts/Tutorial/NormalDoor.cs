@@ -5,6 +5,8 @@ public class NormalDoor : MonoBehaviour
     private Animator _normalDoorAnimator;
     private bool _canOpen = true;
 
+    public AudioClip DoorOpenAudio;
+
     private void Start()
     {
         _normalDoorAnimator = GetComponent<Animator>();
@@ -15,6 +17,7 @@ public class NormalDoor : MonoBehaviour
         if(other.CompareTag("Player") && _canOpen == true)
         {                        
             _normalDoorAnimator.SetTrigger("IsOpen");
+            AudioManager.instance.PlaySound(DoorOpenAudio, transform.position);
             _canOpen = false;
         }
     }
