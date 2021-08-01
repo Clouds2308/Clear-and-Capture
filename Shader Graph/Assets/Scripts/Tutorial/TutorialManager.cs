@@ -6,9 +6,11 @@ using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _drone;
-    [SerializeField] private Weapon _weapon;
+    private GameObject _player;
+    private Weapon _weapon;
+    private Animator _canvasAnimator;
+
     public static TutorialManager instance;
 
     [Header("UI")]
@@ -18,18 +20,29 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private bool _isPaused;
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _playerUIPanel;
+    [SerializeField] private GameObject _sceneEnterPanel;
     [SerializeField] private Slider[] _volumeSliders;
     [SerializeField] private Slider _cameraSensSlider;
 
     private void Awake()
     {
-        instance = this;
+
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+            instance = this;
+
+        Time.timeScale = 1f;
 
         _drone.SetActive(true);
         StartCoroutine(DroneReference());
+        StartCoroutine(SceneEnterDestroy());
         LockCursor();
         _weapon = FindObjectOfType<Weapon>().GetComponent<Weapon>();
         _player = GameObject.FindGameObjectWithTag("Player");
+        _canvasAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         _cameraSensSlider.value = 0.5f;
     }
 
@@ -44,6 +57,12 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         _drone.SetActive(false);
+    }
+
+    IEnumerator SceneEnterDestroy()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _sceneEnterPanel.SetActive(false);
     }
 
 
@@ -74,7 +93,8 @@ public class TutorialManager : MonoBehaviour
 
     private void Pause()
     {
-        _playerUIPanel.SetActive(false);
+        _canvasAnimator.SetTrigger("IsPause");
+        _playerUIPanel.SetActive(false);            
         _pausePanel.SetActive(true);        
         _isPaused = true;
         Time.timeScale = 0f;
