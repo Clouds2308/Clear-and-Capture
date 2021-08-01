@@ -18,7 +18,6 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private bool _isPaused;
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _playerUIPanel;
-    [SerializeField] private GameObject _entryPanel;
     [SerializeField] private Slider[] _volumeSliders;
     [SerializeField] private Slider _cameraSensSlider;
 
@@ -28,7 +27,6 @@ public class TutorialManager : MonoBehaviour
 
         _drone.SetActive(true);
         StartCoroutine(DroneReference());
-        StartCoroutine(DestroyEntryPanel());
         LockCursor();
         _weapon = FindObjectOfType<Weapon>().GetComponent<Weapon>();
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -48,11 +46,6 @@ public class TutorialManager : MonoBehaviour
         _drone.SetActive(false);
     }
 
-    IEnumerator DestroyEntryPanel()
-    {
-        yield return new WaitForSeconds(2f);
-        _entryPanel.SetActive(false);
-    }
 
     public void LockCursor()
     {

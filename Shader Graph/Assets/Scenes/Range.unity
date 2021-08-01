@@ -33048,7 +33048,7 @@ MonoBehaviour:
   _titleText: {fileID: 109195071}
   _infoText: {fileID: 811758970}
   _typeDelay: 0.02
-  _selfDestructTime: 5
+  _selfDestructTime: 8
 --- !u!65 &630022393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81154,7 +81154,7 @@ MonoBehaviour:
   _titleText: {fileID: 109195071}
   _infoText: {fileID: 811758970}
   _typeDelay: 0.02
-  _selfDestructTime: 5
+  _selfDestructTime: 8
 --- !u!65 &1612763980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88350,11 +88350,11 @@ Transform:
   - {fileID: 2071340963}
   - {fileID: 1794033725}
   - {fileID: 951662214}
-  - {fileID: 1107116950}
   - {fileID: 147183827}
   - {fileID: 308309259}
   - {fileID: 936764591}
   - {fileID: 292304978}
+  - {fileID: 1107116950}
   - {fileID: 456933703}
   - {fileID: 1144132273}
   - {fileID: 1831175176}
@@ -88363,8 +88363,8 @@ Transform:
   - {fileID: 568426747}
   - {fileID: 159161486}
   - {fileID: 507330662}
-  - {fileID: 1020822418}
   - {fileID: 144797115}
+  - {fileID: 1020822418}
   - {fileID: 304389766}
   - {fileID: 1773040762}
   - {fileID: 1187662521}
@@ -88377,8 +88377,8 @@ Transform:
   - {fileID: 774856195}
   - {fileID: 2066128873}
   - {fileID: 1645138308}
-  - {fileID: 818362713}
   - {fileID: 1286907162}
+  - {fileID: 818362713}
   - {fileID: 1949113693}
   m_Father: {fileID: 387116194}
   m_RootOrder: 1
