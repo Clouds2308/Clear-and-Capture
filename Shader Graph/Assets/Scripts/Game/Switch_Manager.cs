@@ -7,8 +7,12 @@ public class Switch_Manager : MonoBehaviour
     private GameObject _drone;
     private Animator _switchFadeAnimator;
 
-    [SerializeField] private GameObject _gun;  
+    [SerializeField] private Weapon _weapon;  
     [SerializeField] private KeyCode _switchButton;
+
+    [Header("Effects")]
+    public AudioClip DroneOutAudio;
+    public AudioClip DroneInAudio;
    
     private PlayerInput _playerInput;
     private PlayerMovement _playerMovement;
@@ -35,17 +39,20 @@ public class Switch_Manager : MonoBehaviour
         _droneShoot = _drone.GetComponent<DroneShoot>();
         _droneCamera = _drone.transform.GetChild(0).gameObject;
 
+        _weapon = FindObjectOfType<Weapon>().GetComponent<Weapon>();
+
         _switchFadeAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         
     }
 
     void DeployDrone()
     {
+        
         _playerInput.enabled = false;       //disable input script on player when droning
         _playerMovement.enabled = false;    //disable movement script on player when droning
         _playerCamera.SetActive(false);     //disable camera on player        
         _playerCamera.GetComponent<AudioListener>().enabled = false;    //mute sounds for player when droning
-        _gun.GetComponent<Weapon>().enabled = false;                   //disable gunfire script on gun when droning
+        _weapon.enabled = false;                   //disable gunfire script on gun when droning
 
         _droneInput.enabled = true;         //enable input script on drone when droning
         _droneMovement.enabled = true;       //enable movement script on drone when droning
@@ -63,11 +70,12 @@ public class Switch_Manager : MonoBehaviour
 
     void ExitDrone()
     {
+        
         _playerInput.enabled = true;        //enable input script on player when not droning
         _playerMovement.enabled = true;     //enable movement script on player when not droning
         _playerCamera.SetActive(true);       //enable camera on player
         _playerCamera.GetComponent<AudioListener>().enabled = true;    //enable sounds for player when not droning
-        _gun.GetComponent<Weapon>().enabled = true;                   //enable gunfire script on gun when not droning        
+        _weapon.enabled = true;                   //enable gunfire script on gun when not droning        
 
         _droneInput.enabled = false;        //disable input script on drone when not droning
         _droneMovement.enabled = false;     //disable movement script on drone when not droning
@@ -85,11 +93,13 @@ public class Switch_Manager : MonoBehaviour
 
             if (_isDroning != true)
             {
+                AudioManager.instance.PlaySound(DroneOutAudio, transform.position);
                 Invoke("DeployDrone", 0.9f);
                 _isDroning = true;
             }
             else if (_isDroning == true)
             {
+                AudioManager.instance.PlaySound(DroneInAudio, transform.position);
                 Invoke("ExitDrone", 0.9f);
                 _isDroning = false;
             }

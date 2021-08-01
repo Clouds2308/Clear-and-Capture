@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 115313525}
   - component: {fileID: 115313527}
-  - component: {fileID: 115313526}
-  m_Layer: 0
+  - component: {fileID: 598421511}
+  m_Layer: 12
   m_Name: Sphere Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &115313526
+--- !u!114 &598421511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,14 +54,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 115313524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 67239d1bca841d34cb67409b832d0be0, type: 2}
   isGlobal: 0
-  priority: 0
-  blendDistance: 2
+  blendDistance: 1
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: b39c57a89aab7c9478317ff2ac1d3896, type: 2}
+  priority: 1
 --- !u!1 &1453299324205346108
 GameObject:
   m_ObjectHideFlags: 0

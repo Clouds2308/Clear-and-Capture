@@ -9,6 +9,9 @@ public class DroneShoot : MonoBehaviour
     [SerializeField] private Transform _Emitter;
     [SerializeField] private LineRenderer _lr;
 
+    [Header("Effects")]
+    public AudioClip LaserFireAudio;
+
     public bool canShoot;
 
     private void Start()
@@ -25,6 +28,8 @@ public class DroneShoot : MonoBehaviour
 
      private void FireLine()
      {
+        AudioManager.instance.PlaySound(LaserFireAudio, transform.position);
+
         RaycastHit hitInfo;
         if (Physics.Raycast(_droneCamera.transform.position, _droneCamera.transform.forward, out hitInfo, shootRange))
         {
