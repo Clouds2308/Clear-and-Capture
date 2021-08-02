@@ -8,14 +8,11 @@ public class TutorialManager : MonoBehaviour
 {
     [SerializeField] private GameObject _drone;
     private GameObject _player;
-    private Weapon _weapon;
     private Animator _canvasAnimator;
 
     public static TutorialManager instance;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI _currBulletsText;
-    [SerializeField] private TextMeshProUGUI _maxBulletsText;
     [SerializeField] private KeyCode _pauseKey;
     [SerializeField] private bool _isPaused;
     [SerializeField] private GameObject _pausePanel;
@@ -40,7 +37,7 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(DroneReference());
         StartCoroutine(SceneEnterDestroy());
         LockCursor();
-        _weapon = FindObjectOfType<Weapon>().GetComponent<Weapon>();
+
         _player = GameObject.FindGameObjectWithTag("Player");
         _canvasAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         _cameraSensSlider.value = 0.5f;
@@ -80,9 +77,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        _currBulletsText.text = _weapon.BulletInMag.ToString();
-        _maxBulletsText.text = _weapon.MaxBulletsInMag.ToString();
-
+        
         if(Input.GetKeyDown(_pauseKey) && !_isPaused)
         {
             Pause();
@@ -99,7 +94,7 @@ public class TutorialManager : MonoBehaviour
         _isPaused = true;
         Time.timeScale = 0f;
         UnLockCursor();
-        _weapon.enabled = false;
+        //_weapon.enabled = false;
     }
 
     public void Resume()
@@ -109,7 +104,7 @@ public class TutorialManager : MonoBehaviour
         _isPaused = false;
         Time.timeScale = 1f;
         LockCursor();
-        _weapon.enabled = true;
+        //_weapon.enabled = true;
     }
 
     public void GoToMainMenu()

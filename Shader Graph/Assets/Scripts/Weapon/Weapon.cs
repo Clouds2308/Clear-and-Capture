@@ -3,24 +3,23 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private Camera _playerCam;
-    //[SerializeField] private LayerMask _layerMask;
+    [SerializeField] private Camera _playerCam;    
 
     [Header("Weapon")]
     [SerializeField] private Animator _handsAnimator;
     [SerializeField] private Animator _gunAnimator;
     [SerializeField] private float _weaponRange;    //weapon bullet hit range
     [SerializeField] private float _timeToReload;   //weapon reload time
-    [SerializeField] private float _weaponDamage = 10f; //weapon base damage
-    [SerializeField] private float _fireRate = 4f;  //firerate of weapon
+    [SerializeField] private float _weaponDamage; //weapon base damage
+    [SerializeField] private float _fireRate;  //firerate of weapon
     private float nextTimeToFire = 0f;
     private bool _canFire = true;
     private bool _canReload = true;
 
     [Header("Bullets")]
-    [SerializeField] private int _bulletsInMag = 10;    //bullets present in current magazine
-    [SerializeField] private int _maxBulletsInMag = 30; //max bullets in all magazine
-    [SerializeField] private int _magCapacity = 10;     //capacity of a magazine
+    [SerializeField] private int _bulletsInMag;    //bullets present in current magazine
+    [SerializeField] private int _maxBulletsInMag; //max bullets in all magazine
+    [SerializeField] private int _magCapacity;     //capacity of a magazine
     private bool _isMagEmpty;   // check bullets in current magazine
     private bool _isWeaponEmpty;    //check bullets total
 
@@ -32,6 +31,7 @@ public class Weapon : MonoBehaviour
     public AudioClip CasingDropAudio;
     public AudioClip DryFireAudio;
     public AudioClip ReloadAudio;
+
     public int BulletInMag { get => _bulletsInMag; private set => _bulletsInMag = value; }
     public int MaxBulletsInMag { get => _maxBulletsInMag; private set => _maxBulletsInMag = value; }
     
@@ -45,16 +45,32 @@ public class Weapon : MonoBehaviour
             StartCoroutine(ReloadWeapon());            
         }
 
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire &&_canFire)
+        if (WeaponSwitch.SelectedWeapon == 0)
         {
-            if (!_isMagEmpty)
+            if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && _canFire)
             {
-                nextTimeToFire = Time.time + 1f / _fireRate;
-                FireWeapon();
+                if (!_isMagEmpty)
+                {
+                    nextTimeToFire = Time.time + 1f / _fireRate;
+                    FireWeapon();
+                }
+                else
+                    AudioManager.instance.PlaySound(DryFireAudio, transform.position);
             }
-            else
-                AudioManager.instance.PlaySound(DryFireAudio, transform.position);
-        }                
+        }
+        if (WeaponSwitch.SelectedWeapon == 1)
+        {
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && _canFire)
+            {
+                if (!_isMagEmpty)
+                {
+                    nextTimeToFire = Time.time + 1f / _fireRate;
+                    FireWeapon();
+                }
+                else
+                    AudioManager.instance.PlaySound(DryFireAudio, transform.position);
+            }
+        }
     }
 
     void FireWeapon()
