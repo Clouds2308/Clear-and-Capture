@@ -7,8 +7,9 @@ public class Switch_Manager : MonoBehaviour
     private GameObject _drone;
     private Animator _switchFadeAnimator;
 
-    [SerializeField] private Weapon _weapon;  
     [SerializeField] private KeyCode _switchButton;
+    [SerializeField] private GameObject _playerUIPanel;
+    [SerializeField] private GameObject _droneUIPanel;
 
     [Header("Effects")]
     public AudioClip DroneOutAudio;
@@ -17,6 +18,7 @@ public class Switch_Manager : MonoBehaviour
     private PlayerInput _playerInput;
     private PlayerMovement _playerMovement;
     private GameObject _playerCamera;
+    private Weapon _weapon;  
 
     private DroneInput _droneInput;
     private DroneMovement _droneMovement;
@@ -47,7 +49,9 @@ public class Switch_Manager : MonoBehaviour
 
     void DeployDrone()
     {
-        
+        _playerUIPanel.SetActive(false);
+        _droneUIPanel.SetActive(true);
+
         _playerInput.enabled = false;       //disable input script on player when droning
         _playerMovement.enabled = false;    //disable movement script on player when droning
         _playerCamera.SetActive(false);     //disable camera on player        
@@ -70,7 +74,9 @@ public class Switch_Manager : MonoBehaviour
 
     void ExitDrone()
     {
-        
+        _droneUIPanel.SetActive(false);
+        _playerUIPanel.SetActive(true);
+
         _playerInput.enabled = true;        //enable input script on player when not droning
         _playerMovement.enabled = true;     //enable movement script on player when not droning
         _playerCamera.SetActive(true);       //enable camera on player
