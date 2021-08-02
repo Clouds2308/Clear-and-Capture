@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _weaponRange;    //weapon bullet hit range
     [SerializeField] private float _timeToReload;   //weapon reload time
     [SerializeField] private float _weaponDamage = 10f; //weapon base damage
-    private float _fireRate = 4f;  //firerate of weapon
+    [SerializeField] private float _fireRate = 4f;  //firerate of weapon
     private float nextTimeToFire = 0f;
     private bool _canFire = true;
     private bool _canReload = true;
