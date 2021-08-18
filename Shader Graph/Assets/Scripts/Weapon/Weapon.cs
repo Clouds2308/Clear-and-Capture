@@ -47,6 +47,7 @@ public class Weapon : MonoBehaviour
 
         if (WeaponSwitch.SelectedWeapon == 0)
         {
+            
             if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && _canFire)
             {
                 if (!_isMagEmpty)
@@ -58,8 +59,10 @@ public class Weapon : MonoBehaviour
                     AudioManager.instance.PlaySound(DryFireAudio, transform.position);
             }
         }
+
         if (WeaponSwitch.SelectedWeapon == 1)
         {
+           
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && _canFire)
             {
                 if (!_isMagEmpty)
@@ -114,12 +117,23 @@ public class Weapon : MonoBehaviour
         {
             MaxBulletsInMag = 0;
             Debug.Log("Weapon Empty");
-        }    
+        }
+                
 
         yield return new WaitForSeconds(_timeToReload);
 
-        MaxBulletsInMag -= _magCapacity;
-        BulletInMag += _magCapacity;
+        if (MaxBulletsInMag < _magCapacity)
+        {
+            BulletInMag += MaxBulletsInMag;
+            MaxBulletsInMag -= MaxBulletsInMag;
+        }
+        else
+        {
+            BulletInMag += _magCapacity;
+            MaxBulletsInMag -= _magCapacity;
+        }
+
+
         _canFire = true;
         _canReload = true;
     }
