@@ -74,6 +74,22 @@ public class Weapon : MonoBehaviour
                     AudioManager.instance.PlaySound(DryFireAudio, transform.position);
             }
         }
+
+        if (WeaponSwitch.SelectedWeapon == 2)
+        {
+
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && _canFire)
+            {
+                if (!_isMagEmpty)
+                {
+                    nextTimeToFire = Time.time + 1f / _fireRate;
+                    FireWeapon();
+                }
+                else
+                    AudioManager.instance.PlaySound(DryFireAudio, transform.position);
+            }
+        }
+
     }
 
     void FireWeapon()

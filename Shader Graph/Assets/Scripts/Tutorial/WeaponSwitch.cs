@@ -6,6 +6,7 @@ public class WeaponSwitch : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject _m1911UIPanel;
     [SerializeField] private GameObject _f1UIPanel;
+    [SerializeField] private GameObject _mp5Panel;
     [SerializeField] private TextMeshProUGUI _currBulletsText;
     [SerializeField] private TextMeshProUGUI _maxBulletsText;
 
@@ -33,10 +34,17 @@ public class WeaponSwitch : MonoBehaviour
             _maxBulletsText.text = _weapon[1].MaxBulletsInMag.ToString();
         }
 
+        if(SelectedWeapon == 2)
+        {
+            _currBulletsText.text = _weapon[2].BulletInMag.ToString();
+            _maxBulletsText.text = _weapon[2].MaxBulletsInMag.ToString();
+        }
+
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             SelectedWeapon = 0;
             _f1UIPanel.SetActive(false);
+            _mp5Panel.SetActive(false);
             _m1911UIPanel.SetActive(true);
 
         }
@@ -45,10 +53,19 @@ public class WeaponSwitch : MonoBehaviour
         {
             SelectedWeapon = 1;
             _m1911UIPanel.SetActive(false);
+            _mp5Panel.SetActive(false);
             _f1UIPanel.SetActive(true);
         }
 
-        if(previousselectedweapon!=SelectedWeapon)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3)
+        {
+            SelectedWeapon = 2;
+            _m1911UIPanel.SetActive(false);
+            _f1UIPanel.SetActive(false);
+            _mp5Panel.SetActive(true);
+        }
+
+        if (previousselectedweapon!=SelectedWeapon)
         {
             SelectWeapon();
         }
