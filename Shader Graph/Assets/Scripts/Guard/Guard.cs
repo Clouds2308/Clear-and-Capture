@@ -29,7 +29,7 @@ public class Guard : MonoBehaviour,IDamageable
     private void HandleGuardDeath()
     {
         IsGuardDead = true;
-        _guardAnimator.SetTrigger("isDie");
+        _guardAnimator.SetTrigger("IsDie");
         Destroy(this.gameObject,3.4f);
     }
 
