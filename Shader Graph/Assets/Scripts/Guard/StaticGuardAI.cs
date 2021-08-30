@@ -4,8 +4,11 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class StaticGuardAI : MonoBehaviour
 {
+    private Guard _guard;
     private Transform _player;
     private Animator _guardAnimator;
+
+    [SerializeField] private Transform _raycaster;
 
     [Header("Values")]
     [SerializeField] private float _sightRange;
@@ -28,6 +31,8 @@ public class StaticGuardAI : MonoBehaviour
 
         _guardAnimator = GetComponent<Animator>();
         _player = FindObjectOfType<Player>().GetComponent<Transform>();
+
+        _guard = GetComponent<Guard>();
     }
 
     private void Update()
@@ -40,8 +45,11 @@ public class StaticGuardAI : MonoBehaviour
         if (_playerinSightRange && _playerinCaptureRange && _playerinLos)
             Capture();
 
-        if (Guard.IsGuardDead == true)
+        if (_guard.IsGuardDead == true)
+        {
             _guardAgent.isStopped = true;
+            this.enabled = false;
+        }
                         
     }
 
@@ -53,11 +61,12 @@ public class StaticGuardAI : MonoBehaviour
 
     private void LookForPlayer()
     {
-        _playerDir = _player.position - transform.position;
-        float guardAngle = Vector3.Angle(_playerDir, transform.forward);
+        _playerDir = _player.position - _raycaster.position;
+        float guardAngle = Vector3.Angle(_playerDir, _raycaster.forward);
 
-        if (Physics.Raycast(transform.position, _playerDir, out _hitInfo, _whatisPlayer))       //check player in fov and los
+        if (Physics.Raycast(_raycaster.position, _playerDir, out _hitInfo, _whatisPlayer))       //check player in fov and los
         {
+            Debug.DrawLine(_raycaster.position, _hitInfo.point, Color.green);
             if (_hitInfo.transform.CompareTag("Player") && (guardAngle >= -_guardFOV && guardAngle <= _guardFOV))
                 _playerinLos = true;
             else

@@ -7,8 +7,8 @@ public class Guard : MonoBehaviour,IDamageable
 
     private Animator _guardAnimator;
 
-    private static bool _isGuardDead;
-    public static bool IsGuardDead { get => _isGuardDead; private set => _isGuardDead = value; }
+    private bool _isGuardDead;
+    public bool IsGuardDead { get => _isGuardDead; private set => _isGuardDead = value; }
 
     private void Start()
     {

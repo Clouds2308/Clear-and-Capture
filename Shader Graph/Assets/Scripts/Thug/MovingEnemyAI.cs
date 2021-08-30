@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(NavMeshAgent))]
 public class MovingEnemyAI : MonoBehaviour
 {
+    private Guard _guard;
     private Transform _player;
     private Animator _thugAnimator;
 
@@ -43,6 +44,8 @@ public class MovingEnemyAI : MonoBehaviour
         _thugAnimator = GetComponent<Animator>();
         _player = FindObjectOfType<Player>().GetComponent<Transform>();
 
+        _guard = GetComponent<Guard>();
+
         Patrol();
     }
 
@@ -58,7 +61,7 @@ public class MovingEnemyAI : MonoBehaviour
             Patrol();
         }
 
-        if (Guard.IsGuardDead == true)
+        if (_guard.IsGuardDead == true)
         {
             _thugAgent.isStopped = true;
             this.enabled = false;
@@ -97,7 +100,7 @@ public class MovingEnemyAI : MonoBehaviour
 
         _thugAnimator.SetBool("CanShoot",true);
 
-        if(Time.time>=nextTimetoFire && !Guard.IsGuardDead)
+        if(Time.time>=nextTimetoFire && !_guard.IsGuardDead)
         {
             nextTimetoFire = Time.time + 1f / _fireRate;
             StartCoroutine(ShootPlayer());           

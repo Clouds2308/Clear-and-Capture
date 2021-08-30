@@ -72,7 +72,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1.3}
+  - {x: 0, y: 0, z: 2}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -200,7 +200,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1.3}
+  - {x: 0, y: 0, z: 2}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -1282,8 +1282,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7109356, y: 0.6037483, z: 1.4889947}
-  m_Center: {x: 0.005970955, y: 0.1037693, z: 0.5536937}
+  m_Size: {x: 0.7109356, y: 0.6037483, z: 2.1848648}
+  m_Center: {x: 0.005970955, y: 0.1037693, z: 0.90162885}
 --- !u!114 &1731810755
 MonoBehaviour:
   m_ObjectHideFlags: 0

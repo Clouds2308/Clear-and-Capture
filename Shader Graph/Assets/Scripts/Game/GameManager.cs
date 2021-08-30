@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             Pause();
         }
 
-        //_player.GetComponent<PlayerMovement>().CameraSensitivity = _cameraSensSlider.value;
+        _player.GetComponent<PlayerMovement>().CameraSensitivity = _cameraSensSlider.value;
 
         _playerHealthText.text = _player.CurrentHealth.ToString();
     }
