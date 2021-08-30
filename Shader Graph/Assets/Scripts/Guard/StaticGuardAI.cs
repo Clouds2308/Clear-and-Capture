@@ -66,7 +66,6 @@ public class StaticGuardAI : MonoBehaviour
 
         if (Physics.Raycast(_raycaster.position, _playerDir, out _hitInfo, _whatisPlayer))       //check player in fov and los
         {
-            Debug.DrawLine(_raycaster.position, _hitInfo.point, Color.green);
             if (_hitInfo.transform.CompareTag("Player") && (guardAngle >= -_guardFOV && guardAngle <= _guardFOV))
                 _playerinLos = true;
             else
