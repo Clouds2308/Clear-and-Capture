@@ -5,6 +5,7 @@ public class Player : MonoBehaviour,IDamageable
 {
     [SerializeField] private int _currPlayerHealth = 100;   //players health at the moment
     [SerializeField] private int _maxPlayerHealth = 100;    //max health player can have     
+    [SerializeField] private Animator _canvasAnimator;
 
     public int CurrentHealth { get => _currPlayerHealth;  private set => _currPlayerHealth = value; }
     
@@ -12,8 +13,7 @@ public class Player : MonoBehaviour,IDamageable
     {
 
         _currPlayerHealth -= (int) damage;
-       // GameEvents.current.PlayerHealthChange(); //raise event when player heatlh changes
-
+        _canvasAnimator.SetTrigger("IsPlayerDamage");
 
         if (_currPlayerHealth <= 0)
         {

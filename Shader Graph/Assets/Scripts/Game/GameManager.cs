@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private GameObject _drone;
-    private GameObject _player;
+    private Player _player;
     private Animator _canvasAnimator;
 
     [Header("UI")]
@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _sceneEnterPanel;
     [SerializeField] private Slider[] _volumeSliders;
     [SerializeField] private Slider _cameraSensSlider;
+    [SerializeField] private TextMeshProUGUI _playerHealthText;
 
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SceneEnterDestroy());
         LockCursor();
 
-        _player = GameObject.FindGameObjectWithTag("Player");
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         _canvasAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         _cameraSensSlider.value = 0.5f;
     }
@@ -61,7 +62,9 @@ public class GameManager : MonoBehaviour
             Pause();
         }
 
-        _player.GetComponent<PlayerMovement>().CameraSensitivity = _cameraSensSlider.value;
+        //_player.GetComponent<PlayerMovement>().CameraSensitivity = _cameraSensSlider.value;
+
+        _playerHealthText.text = _player.CurrentHealth.ToString();
     }
 
 

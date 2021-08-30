@@ -641,6 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235750390712535762}
+  - component: {fileID: 452273276}
   m_Layer: 0
   m_Name: Bulletin_Board
   m_TagString: Untagged
@@ -687,6 +688,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
+--- !u!65 &452273276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904341779596497000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5472565, y: 1.9329634, z: 0.27962112}
+  m_Center: {x: 0.010637999, y: 1.9599862, z: -0.026748404}
 --- !u!1 &2070899117022590670
 GameObject:
   m_ObjectHideFlags: 0

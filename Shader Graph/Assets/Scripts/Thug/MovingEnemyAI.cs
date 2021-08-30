@@ -59,7 +59,10 @@ public class MovingEnemyAI : MonoBehaviour
         }
 
         if (Guard.IsGuardDead == true)
+        {
             _thugAgent.isStopped = true;
+            this.enabled = false;
+        }
 
     }
 
