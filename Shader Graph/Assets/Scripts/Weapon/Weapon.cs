@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private Camera _playerCam;    
+    [SerializeField] private Camera _playerCam;
+    public LayerMask _mask;
 
     [Header("Weapon")]
     [SerializeField] private Animator _handsAnimator;
@@ -105,7 +106,7 @@ public class Weapon : MonoBehaviour
         BulletInMag -= 1;
         RaycastHit _hit;
 
-        if (Physics.Raycast(_playerCam.transform.position, _playerCam.transform.forward, out _hit, _weaponRange))
+        if (Physics.Raycast(_playerCam.transform.position, _playerCam.transform.forward, out _hit, _weaponRange,_mask))
         {
             IDamageable _guard = _hit.transform.GetComponent<IDamageable>();
             IDestructibleByGun _destructible = _hit.transform.GetComponent<IDestructibleByGun>();

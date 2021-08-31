@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5133627903560087177
 Transform:
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletCount: 0
+  AmmoPickupAudio: {fileID: 8300000, guid: aee4bd44849bf114a9597a03af4dd246, type: 3}
 --- !u!1001 &243409574
 PrefabInstance:
   m_ObjectHideFlags: 0
