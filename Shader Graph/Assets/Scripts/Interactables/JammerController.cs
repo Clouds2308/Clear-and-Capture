@@ -2,7 +2,7 @@
 
 public class JammerController : MonoBehaviour,IDestructibleByGun
 {
-    [SerializeField] private GameObject explosionEffect;
+    
     private DroneShoot _droneShoot;   
 
     private void Start()
@@ -28,9 +28,6 @@ public class JammerController : MonoBehaviour,IDestructibleByGun
 
     public void DestroyOnHit()
     {        
-        _droneShoot.canShoot = true;
-        GameObject clone = (GameObject)Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
-        Destroy(clone, 2f);
+        _droneShoot.canShoot = true;           
     }
 }

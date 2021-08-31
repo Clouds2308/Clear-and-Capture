@@ -15,7 +15,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _fireRate;  //firerate of weapon
     private float nextTimeToFire = 0f;
     private bool _canFire = true;
+    public bool CanFire { get => _canFire; set => _canFire = value; }
     private bool _canReload = true;
+    public bool CanReload { get => _canReload; set => _canReload = value; }
 
     [Header("Bullets")]
     [SerializeField] private int _bulletsInMag;    //bullets present in current magazine
@@ -27,6 +29,7 @@ public class Weapon : MonoBehaviour
     [Header("Effects")]
     public ParticleSystem BulletTracer;
     public ParticleSystem MuzzleFlash;
+    public GameObject EnemyBloodEffect;
     public GameObject ImpactEffect;
     public AudioClip ShootAudio;
     public AudioClip CasingDropAudio;
@@ -95,6 +98,7 @@ public class Weapon : MonoBehaviour
 
     void FireWeapon()
     {
+
         _handsAnimator.SetTrigger("IsFire");
         _gunAnimator.SetTrigger("IsFire");
 
@@ -111,14 +115,19 @@ public class Weapon : MonoBehaviour
             IDamageable _guard = _hit.transform.GetComponent<IDamageable>();
             IDestructibleByGun _destructible = _hit.transform.GetComponent<IDestructibleByGun>();
 
-            if(_guard!=null)
-                _guard.TakeDamage(_weaponDamage);                
+            if (_guard != null)
+            {
+                _guard.TakeDamage(_weaponDamage);
+
+                GameObject bloodGo = Instantiate(EnemyBloodEffect, _hit.point, Quaternion.LookRotation(_hit.normal));
+                Destroy(bloodGo, 1f);
+            }
                              
             if(_destructible!=null)
                 _destructible.DestroyOnHit();
-                                    
-            GameObject impactGo = Instantiate(ImpactEffect, _hit.point, Quaternion.LookRotation(_hit.normal));
-            Destroy(impactGo, 1f);
+
+             GameObject impactGo = Instantiate(ImpactEffect, _hit.point, Quaternion.LookRotation(_hit.normal));
+             Destroy(impactGo, 1f);
         }
     }   
 
@@ -133,7 +142,6 @@ public class Weapon : MonoBehaviour
         if(MaxBulletsInMag<=0)
         {
             MaxBulletsInMag = 0;
-            Debug.Log("Weapon Empty");
         }
                 
 

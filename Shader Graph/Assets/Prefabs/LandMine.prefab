@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 291593370276630625}
   - component: {fileID: 1482966440}
   - component: {fileID: 1482966441}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LandMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,9 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88285249786a4324cb537e3ebe7b7197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 100002, guid: 6890a03af913b874092fbb1e8337747d, type: 3}
-  id: 0
+  _damageScreenAnimator: {fileID: 0}
   _mineExplosionDamage: 10
+  explosionEffect: {fileID: 100002, guid: 6890a03af913b874092fbb1e8337747d, type: 3}
+  ExplosionAudio: {fileID: 0}
 --- !u!1 &633489610876436500
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +73,7 @@ GameObject:
   - component: {fileID: 252566467801815726}
   - component: {fileID: 3760101377906283787}
   - component: {fileID: 1426065490029011393}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 115313525}
   - component: {fileID: 115313527}
   - component: {fileID: 598421511}
+  - component: {fileID: 1391512143}
   m_Layer: 12
   m_Name: Sphere Volume
   m_TagString: Untagged
@@ -62,6 +63,18 @@ MonoBehaviour:
   blendDistance: 1
   weight: 1
   priority: 1
+--- !u!114 &1391512143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115313524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee60aeeaf19cb1d4abc1b8c5ffdc2e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1453299324205346108
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2261080402794084230}
   - component: {fileID: 114488223}
-  - component: {fileID: 919648669587295412}
+  - component: {fileID: 211592765}
   m_Layer: 0
   m_Name: Jammer
   m_TagString: Untagged
@@ -107,9 +120,9 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 1
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!114 &919648669587295412
+--- !u!114 &211592765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453299324205346108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee60aeeaf19cb1d4abc1b8c5ffdc2e7a, type: 3}
+  m_Script: {fileID: 11500000, guid: abeb5d2aa68e68c44b20b0398b45b360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}

@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currGuardHealth: 50
   _maxGuardHealth: 50
+  DeathBloodStream: {fileID: 198000014159833656, guid: a3768c8a9d1b90d4bb0eb0e4bdbe730c,
+    type: 3}
 --- !u!1 &446493157407644395
 GameObject:
   m_ObjectHideFlags: 0

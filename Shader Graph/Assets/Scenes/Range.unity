@@ -6282,7 +6282,7 @@ GameObject:
   - component: {fileID: 112451398}
   - component: {fileID: 112451397}
   m_Layer: 11
-  m_Name: PostFx
+  m_Name: PostFx_Training
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

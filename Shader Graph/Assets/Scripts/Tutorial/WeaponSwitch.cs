@@ -26,18 +26,24 @@ public class WeaponSwitch : MonoBehaviour
         {
             _currBulletsText.text = _weapon[0].BulletInMag.ToString();
             _maxBulletsText.text = _weapon[0].MaxBulletsInMag.ToString();
+            _weapon[0].CanFire = true;
+            _weapon[0].CanReload = true;
         }
 
         if (SelectedWeapon == 1)
         {
             _currBulletsText.text = _weapon[1].BulletInMag.ToString();
             _maxBulletsText.text = _weapon[1].MaxBulletsInMag.ToString();
+            _weapon[1].CanFire = true;
+            _weapon[1].CanReload = true;
         }
 
         if(SelectedWeapon == 2)
         {
             _currBulletsText.text = _weapon[2].BulletInMag.ToString();
             _maxBulletsText.text = _weapon[2].MaxBulletsInMag.ToString();
+            _weapon[2].CanFire = true;
+            _weapon[2].CanReload = true;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
@@ -67,7 +73,7 @@ public class WeaponSwitch : MonoBehaviour
 
         if (previousselectedweapon!=SelectedWeapon)
         {
-            SelectWeapon();
+            SelectWeapon();            
         }
     }
 
